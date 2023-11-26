@@ -1,0 +1,40 @@
+.mainDiv{
+    width:100%;
+    height: auto;
+    border:none;
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+}
+
+.leftDiv {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%
+}
+
+.rightDiv {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2%
+}
+
+
+.infoDiv{
+    width:100%;
+    height:300px;
+    border: none;
+    padding: 2%;
+}
+
+.HPhr{
+    margin-left: 10%;
+    margin-right: 10%;
+    background-image: linear-gradient(to right, transparent, black, transparent);
+    border: none;
+    height: 2px;
+}

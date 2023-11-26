@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<script src="advisors.js"></script>
+</head>
+<body onload="getAdvisors('')">
+
+	<!-- List Advisors DO NOT TOUCH
+		 All content population is gonna exist in JS
+		 If you do want to work on this, head to advisors.js in function printAdvisors()
+		 This is because PHP things
+	-->
+	<div id="advisor-list"></div>
+
+
+	<!-- Search & Filter Form 
+		 feel free to style and add inputs
+		 do not change existing inputs
+		 added inputs must match format with existing inputs
+	-->
+	<form id="filters" method="get" action="">
+		<label for="search">Search:</label>
+		<input type="text" id="search" name="search">
+
+		<p>Expertise</p>
+		<input type="checkbox" id="cen" name="Civil Engineering">
+		<label for="cen">Civil Engineering</label>
+		<br>
+		<input type="checkbox" id="ben" name="Bio-Engineering">
+		<label for="ben">Bio-Engineering</label>
+		<br>
+		<input type="checkbox" id="csen" name="Computer Science & Engineering">
+		<label for="csen">Computer Science & Engineering</label>
+		<br>
+		<input type="checkbox" id="wden" name="Web Design & Engineering">
+		<label for="wden">Web Design & Engineering</label>
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+
+	<!-- DO NOT TOUCH leave at bottom pls -->
+	<script>
+		document.getElementById("filters").addEventListener('submit', function(event) {
+		  	event.preventDefault();
+
+		  	const form = document.getElementById("filters").elements;
+			let filters = [];
+			for (let i = 0; i < form.length; i++) {
+				if ((form[i].type == "checkbox") && (form[i].checked == true)) {
+					filters.push(form[i].name);
+				}
+			}
+
+			let filter = `search=${form[0].value}`;
+			if (filters.length > 0) {
+				filter += `&filters=${filters.toString()}`;
+			}
+
+		  	getAdvisors(filter);
+		});	
+	</script>
+</body>
+</html>

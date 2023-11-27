@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="studentForm.js"></script>  
+</head>
+<body>
+    <h1>Anisha's Part</h1>
+    <hr>
+    <h1 style="text-align: center;">Student Information Form</h1>
+    <p style="width: 50%; margin: 0 auto;">If you are looking for group members for Senior Design, please fill out the following form so your information will be displayed on a public Google sheet, allowing others to contact you; you can also check the Google sheet to see who is also looking for a group.</p>
+    <br>
+    <div id="formDiv">
+        <form id="infoForm">
+            <table>
+                <tr>
+                    <td><label for="fName">First Name:</label></td>
+                    <td><input type="text" name="fName" id="fName" class="mustInput" placeholder="Type in your first name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lName">Last Name:</label></td>
+                    <td><input type="text" name="lName" id="lName" class="mustInput" placeholder="Type in your last name"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="major">Major:</label>
+                    </td>
+                    <td>
+                        <select id="major" name="majorList" class="mustInput" style="width: 100%;">
+                            <option value="">Select a Major</option>
+                            <option value="Bio">Bioengineering</option>
+                            <option value="Civil">Civil Engineering</option>
+                            <option value="CSE">Computer Science and Engineering</option>
+                            <option value="ECE">Electrical and Computer Engineering</option>
+                            <option value="ELEN">Electrical Engineering</option>
+                            <option value="General">General Engineering</option>
+                            <option value="Mechanical">Mechanical Engineering</option>
+                            <option value="WDE">Web Design and Engineering</option>
+                        </select>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td><label for="sEmail">SCU Email:</label></td>
+                    <td><input type="text" name="sEmail" id="sEmail" class="mustInput" placeholder="Type in your scu email"></td>
+                </tr>
+                <tr>
+                    <td><label for="sInterest">Interest:</label></td>
+                    <td><input type="text" name="sInterest" id="sInterest" class="mustInput" placeholder="Type in what your are interest in"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox" id="checkAgree">I agree all the information will be shown on public Google Sheets</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit Form" id="submiting" onclick="submitFrom()"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

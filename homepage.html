@@ -3,79 +3,84 @@
 <head>
     <title>Senior Design Showcase</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <style>
-    img {
-  float:left;
-  margin-right:10px;
-}
-    </style>
 </head>
 <body>
-    <div class="header-container">
-    <header>
+    <header id="header-container">
         <img src="embed/sculogo.jpg" width="100" height="100" alt="logo">
-    <h1 style="text-align: left; font-family:cursive; color: #7b1113">Santa Clara University</h1>
-    <h2 style="text-align: left; font-family:serif; font-weight:100;">SCHOOL OF ENGINEERING</h2>
-</header>
-</div>
+        <div>
+            <h1 style="font-family: cursive; color: #7b1113">Santa Clara University</h1>
+            <h2 style="font-weight:100;">SCHOOL OF ENGINEERING</h2>
+        </div>
+    </header>
+
     <div class="topnav">
         <a class="active" href="#home">Home</a>
         <a href="#Advisor">Advisor</a>
         <a href="#TeamBuilding">Team Building</a>
     </div>
 
-    <h1 style="text-align: left; font-family:serif;">Senior Design</h1>
-    <div>
-        <h1 style="margin-left: 12%;">About</h1>
-        <div class="mainDiv">
-            <div class="leftDiv">
-                <div class="infoDiv">
+    <div id="main-container">
+        <h1>Senior Design</h1>
+        <h1>About</h1>
+        <div class="section-main">
+
+            <div class="section-left">
+                <div class="section-info">
                     <img src="embed/seniorDesign.jpg" alt="2023 Senior Design Image" style="border-radius: 13px; height:90%; width:100%">
                 </div>
-                <div class="infoDiv" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                <div class="section-info" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
                     <h3 style="margin-bottom: 10px;">Recent Senior Designs</h3>
                     <p>Check out more information about SCU 2023 Senior Design!</p>
                 </div>          
             </div>
-            <div class="rightDiv">
-                <div id="aboutSD" class="infoDiv">
+
+            <div class="section-right">
+                <div id="about-sd" class="section-info">
                     <h3 style="text-align: center;">What is Senior Design</h3>
                     <p>A requirement for graduation, student teams take on year-long capstone projects, putting their problem-solving skills to the test and collaborating to take an idea from concept to design to prototype. On the second Thursday in May, teams present their work to an audience of industry experts, faculty advisors, students, family, and friends of the School of Engineering at the annual Senior Design Conference—a highlight of our academic year. All are welcome to watch the student presentations!</p>
                 </div>
-                <div class="infoDiv">
+                <div class="section-info">
                     <iframe src="https://www.youtube.com/embed/1DBi0eK2g7I?si=-84v5mRXWAEg8EFt" style="border-radius: 13px; height:90%; width:100%"></iframe>
                 </div>
             </div>
+
         </div>
-    <hr class="HPhr">
-        <h1 style="margin-left: 12%;">More Information</h1>
-        <div style="display: flex; justify-content: center;">
-            <iframe src="embed/2022SDFinal.pdf" style="width:60%; height: 600px;"></iframe>
-        </div>
-    </div>
-    <hr class="HPhr">
-    <h1 style="margin-left: 12%;">Project Information</h1>
-    <div class="mainDiv">
-        <div class="leftDiv">
-            <div class="infoDiv">
-                <h3 style="text-align: center;">Group Members</h3>
-                <ul>
-                    <li>Megu Kanazawa</li>
-                    <li>Isabelle Hu</li>
-                    <li>Zachariah Wang</li>
-                    <li>Anisha Malani</li>
-                </ul>
+
+        <hr>
+
+        <div>
+            <h1>More Information</h1>
+            <div style="display: flex; justify-content: center;">
+                <iframe src="embed/2022SDFinal.pdf" id="sd-pdf"></iframe>
             </div>
         </div>
-        <div class="rightDiv">
-            <div class="infoDiv">
-                <h3 style="text-align: center;">Things Included</h3>
-                <ul>
-                    <li>Infromation about Advisors</li>
-                    <li>Support individual student finding groups</li>
-                </ul>
+
+        <hr>
+
+        <h1>Project Information</h1>
+        <div class="section-main">
+            <div class="section-left">
+                <div class="infoDiv">
+                    <h3 style="text-align: center;">Group Members</h3>
+                    <ul>
+                        <li>Megu Kanazawa</li>
+                        <li>Isabelle Hu</li>
+                        <li>Zachariah Wang</li>
+                        <li>Anisha Malani</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section-right">
+                <div class="section-info">
+                    <h3 style="text-align: center;">Things Included</h3>
+                    <ul>
+                        <li>Infromation about Advisors</li>
+                        <li>Support individual student finding groups</li>
+                    </ul>
+                </div>
             </div>
         </div>
+
     </div>
 </body>
 </html>

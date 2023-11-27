@@ -1,40 +1,93 @@
-.mainDiv{
-    width:100%;
+.mainDiv {
+    width: 100%;
     height: auto;
-    border:none;
+    border: none;
     display: flex;
     justify-content: center;
     gap: 4%;
-}
-
-.leftDiv {
+  }
+  
+  .leftDiv {
     width: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2%
-}
-
-.rightDiv {
+  }
+  
+  .rightDiv {
     width: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2%
-}
-
-
-.infoDiv{
-    width:100%;
-    height:300px;
+  }
+  
+  
+  .infoDiv {
+    width: 100%;
+    height: 300px;
     border: none;
     padding: 2%;
-}
-
-.HPhr{
+  }
+  
+  .HPhr {
     margin-left: 10%;
     margin-right: 10%;
     background-image: linear-gradient(to right, transparent, black, transparent);
     border: none;
     height: 2px;
-}
+  }
+  
+  #submiting {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    height: 30px;
+    width: 300px;
+    font-size: medium;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid whitesmoke;
+    opacity: .4;
+    box-shadow: 0 3px #999;
+  }
+  
+  #submiting:hover {
+    font-size: medium;
+    color: white;
+    border: none;
+    opacity: .4;
+  }
+  
+  #submiting:active {
+    box-shadow: 0 3px black;
+    transform: translateX(-50%) translateY(2px);
+  }
+  
+  .mustInput {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 100%
+  }
+  
+  .mustInput:hover {
+    background-color: black;
+    opacity: .4;
+    color: white;
+  }
+  
+  #checkAgree:hover {
+    opacity: .4;
+  }
+  
+  #formDiv {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+  }

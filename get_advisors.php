@@ -5,7 +5,7 @@ $search_results = array();
 $filter_results = array();
 
 $search = $_GET["search"];
-$filters = explode(",", trim($_GET["filters"]));
+$filters = explode(" . ", trim($_GET["filters"]));
 
 
 if (count($filters) > 0) {

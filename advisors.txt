@@ -1,2 +1,2 @@
-John Doe, email@scu.edu, Bio-Engineering
-Advisor Name, email2@scu.edu, Civil Engineering
+John Doe | email@scu.edu | Bio-Engineering
+Advisor Name | email2@scu.edu | Civil Engineering

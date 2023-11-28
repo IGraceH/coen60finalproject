@@ -161,3 +161,28 @@ th {
   padding:20px;
 }
 
+#advisor-table table, #advisor-table th, #advisor-table td {
+  border-collapse: collapse;
+  width: 40vw;
+  min-width: 400px;
+}
+
+#advisor-table {
+  background-color: grey;
+}
+
+#advisor-table td {
+  background-color: white;
+  padding: 20px;
+}
+
+#advisor-table h2 {
+  display: inline;
+  margin-right: 20px;
+}
+
+.table-info-line {
+  background-color: #7b1113;
+  width: 100%;
+  height: 2px;
+}

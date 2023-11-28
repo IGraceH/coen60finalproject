@@ -3,12 +3,10 @@
  */
 
 function getAdvisors(filter) {
-	console.log(filter);
     let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         const extractedContent = this.responseText;
-        console.log(extractedContent);
         printAdvisors(processContent(extractedContent));
       }
     }
@@ -22,7 +20,7 @@ function processContent(content) {
 		content = content.substring(2, content.length-2);
 		content = content.split('","')
 		for (let item of content) {
-			item = item.split(", ");
+			item = item.split(" | ");
 			advisors.push({name: item[0], email: item[1], expertise: item[2]});
 		}
 	}
@@ -35,11 +33,15 @@ function processContent(content) {
 function printAdvisors(advisors) {
 	let content = "";
 
-	content += "<ul>";
+	content += "<table id='advisor-table'><tbody>";
 	for (let advisor of advisors) {
-		content += `<li>${advisor.name}, ${advisor.email}, ${advisor.expertise}</li>`;
+		content += `<tr><td>
+				<h2>${advisor.name}</h2>${advisor.email}
+				<div class='table-info-line'></div>
+				<p>${advisor.expertise}</p>
+			</td></tr>`;
 	}
-	content += "</ul>";
+	content += "</tbody></table>";
 
 	document.getElementById("advisor-list").innerHTML = content;
 }

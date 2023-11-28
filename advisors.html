@@ -3,9 +3,6 @@
 <head>
 	<title>Senior Design Showcase</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <style>
-
-    </style>
 	<script src="advisors.js"></script>
 </head>
 <body onload="getAdvisors('')">
@@ -18,50 +15,73 @@
     </header>
 
     <div id="nav">
-        <a class="active" href="#home">Home</a>
-        <a href="#Advisor">Advisor</a>
-        <a href="#TeamBuilding">Team Building</a>
+        <a href="homepage.html">Home</a>
+        <a class="active" href="advisors.html">Advisor</a>
+        <a href="studentSubmit.html">Team Building</a>
     </div>
 
-    <h1>Find Advisors</h1>
+	<div class="section-main">
+		<div>
+		    <h1>Find Advisors</h1>
 
-    <!-- List Advisors DO NOT TOUCH
-		 All content population is gonna exist in JS
-		 If you do want to work on this, head to advisors.js in function printAdvisors()
-		 This is because PHP things
-	-->
-	<div id="advisor-list"></div>
+			<div id="advisor-filter">
+			
+				<h2>Filter</h2>
 
-	<div id="form">
-		<h2>Filter</h2>
+			<!-- Search & Filter Form 
+				 feel free to style and add inputs
+				 do not change existing inputs
+				 added inputs must match format with existing inputs
+			-->
 
-	<!-- Search & Filter Form 
-		 feel free to style and add inputs
-		 do not change existing inputs
-		 added inputs must match format with existing inputs
-	-->
+			
 
-	
+				<form id="filters" method="get" action="">
+					<label for="search">Search:</label>
+					<input type="text" id="search" name="search">
 
-		<form id="filters" method="get" action="">
-			<label for="search">Search:</label>
-			<input type="text" id="search" name="search">
+					<p>Expertise:</p>
+					<input type="checkbox" id="ben" name="Bioengineering">
+					<label for="ben">Bioengineering</label>
+					<br>
+					<input type="checkbox" id="cen" name="Civil Engineering">
+					<label for="cen">Civil Engineering</label>
+					<br>
+					<input type="checkbox" id="csen" name="Computer Science and Engineering">
+					<label for="csen">Computer Science and Engineering</label>
+					<br>
+					<input type="checkbox" id="ece" name="Electrical and Computer Engineering">
+					<label for="ece">Electrical and Computer Engineering</label>
+					<br>
+					<input type="checkbox" id="ecen" name="Electrical Engineering">
+					<label for="ecen">Electrical Engineering</label>
+					<br>
+					<input type="checkbox" id="gen" name="General Engineering">
+					<label for="gen">General Engineering</label>
+					<br>
+					<input type="checkbox" id="mech" name="Mechanical Engineering">
+					<label for="mech">Mechanical Engineering</label>
+					<br>
+					<input type="checkbox" id="wde" name="Web Design & Engineering">
+					<label for="wde">Web Design & Engineering</label> <br>
+					<br>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+		</div>
 
-			<p>Expertise</p>
-			<input type="checkbox" id="cen" name="Civil Engineering">
-			<label for="cen">Civil Engineering</label>
-			<br>
-			<input type="checkbox" id="ben" name="Bio-Engineering">
-			<label for="ben">Bio-Engineering</label>
-			<br>
-			<input type="checkbox" id="csen" name="Computer Science & Engineering">
-			<label for="csen">Computer Science & Engineering</label>
-			<br>
-			<input type="checkbox" id="wden" name="Web Design & Engineering">
-			<label for="wden">Web Design & Engineering</label> <br>
-			<br>
-			<input type="submit" value="Submit">
-		</form>
+		<div>
+			<h1 style="visibility:hidden;">F</h1>
+
+
+		    <!-- List Advisors DO NOT TOUCH
+				 All content population is gonna exist in JS
+				 If you do want to work on this, head to advisors.js in function printAdvisors()
+				 This is because PHP things
+			-->
+			<div id="advisor-list"></div>
+
+		</div>
 	</div>
 	
 	<!-- DO NOT TOUCH leave at bottom pls -->

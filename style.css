@@ -64,7 +64,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 }
 
 .section-info {
@@ -97,6 +97,7 @@ hr {
   width: 50%;
   margin: 0 auto;
 }
+
 
 #submit-button {
   background-color: black;
@@ -141,12 +142,12 @@ hr {
   opacity: .4;
 }
 
-#spreadSDiv {
+#spreadsheet {
   justify-content: center;
   display:flex;
 }
 
-#studentTable {
+#student-table {
   display:flex;
   background-color: gainsboro;
   border-collapse:collapse;
@@ -161,3 +162,47 @@ th {
   padding:20px;
 }
 
+#advisor-filter {
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 20px;
+  width: 300px;
+  height: calc(100vh - 350px);
+  overflow-y: auto;
+}
+
+#advisor-filter::-webkit-scrollbar {
+    display: none;
+}
+
+#advisor-filter {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#advisor-table table, #advisor-table th, #advisor-table td {
+  border-collapse: collapse;
+  width: 40vw;
+  min-width: 400px;
+}
+
+#advisor-table {
+  background-color: grey;
+}
+
+#advisor-table td {
+  background-color: white;
+  padding: 20px;
+}
+
+#advisor-table h2 {
+  display: inline;
+  margin-right: 20px;
+}
+
+.table-info-line {
+  background-color: #7b1113;
+  width: 100%;
+  height: 2px;
+}

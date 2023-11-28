@@ -142,12 +142,12 @@ hr {
   opacity: .4;
 }
 
-#spreadSDiv {
+#spreadsheet {
   justify-content: center;
   display:flex;
 }
 
-#studentTable {
+#student-table {
   display:flex;
   background-color: gainsboro;
   border-collapse:collapse;

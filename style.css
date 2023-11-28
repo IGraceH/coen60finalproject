@@ -64,7 +64,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 }
 
 .section-info {
@@ -97,6 +97,7 @@ hr {
   width: 50%;
   margin: 0 auto;
 }
+
 
 #submit-button {
   background-color: black;
@@ -159,6 +160,25 @@ th {
   color:white;
   text-align:center;
   padding:20px;
+}
+
+#advisor-filter {
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 20px;
+  width: 300px;
+  height: calc(100vh - 350px);
+  overflow-y: auto;
+}
+
+#advisor-filter::-webkit-scrollbar {
+    display: none;
+}
+
+#advisor-filter {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 #advisor-table table, #advisor-table th, #advisor-table td {

@@ -141,7 +141,23 @@ hr {
   opacity: .4;
 }
 
-#student-spreadsheet {
+#spreadSDiv {
   justify-content: center;
   display:flex;
 }
+
+#studentTable {
+  display:flex;
+  background-color: gainsboro;
+  border-collapse:collapse;
+  text-align: center;
+  /* width:60%; */
+}
+
+th {
+  background-color: #999;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
+

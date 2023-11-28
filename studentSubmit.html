@@ -24,7 +24,7 @@
     <p style="width: 50%; margin: 0 auto;">If you are looking for group members for Senior Design, please fill out the following form so your information will be displayed on a public Google sheet, allowing others to contact you; you can also check the Google sheet to see who is also looking for a group.</p>
     <br>
     <div id="form">
-        <form id="student-form">
+        <form id="student-form" method = "get" action = "">
             <table>
                 <tr>
                     <td><label for="fname">First Name:</label></td>
@@ -64,14 +64,37 @@
                     <td colspan="2"><input id="check" type="checkbox">I agree all the information will be shown on a public Google Sheets</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input id="submit-button" type="submit" value="Submit" onclick="submitFrom()"></td>
+                    <td colspan="2"><input id="submit-button" type="submit" value="Submit"></td>
                 </tr>
             </table>
         </form>
     </div>
     <br><br>
-    <div id="student-spreadsheet">
-        <iframe width = "800" height = "400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTsXgGx-hypOyiDthVQ1udv6QJGuIqwQVjs2KSUgiKYbW4xN09h6ZEkBN6cAU4QehxPrSFeU1RvDqcl/pubhtml?widget=true&amp;headers=false"></iframe>
+    <div id = "spreadSDiv">
+        <table id = "studentTable">
+        </table>
     </div>
+    <script>
+        document.getElementById("student-form").addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (submitFrom()) {
+                const form = document.getElementById("student-form").elements;
+                let info = [];
+                for (let i = 0; i < form.length; i++) {
+                    info.push(form[i].value);
+                }
+                var str = "info=";
+                for (let i = 0; i < info.length; i++) {
+                    if (info[i] != "on" && info[i] != "Submit Form" && info[i] != "") {
+                        str += info[i];
+                    }
+                    if (i != info.length - 1) {
+                        str += ",";
+                    }
+                }
+                updateTable(str);
+            }
+        });
+    </script>
 </body>
 </html>

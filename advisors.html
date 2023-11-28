@@ -5,42 +5,35 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <style>
 
-    img {
-  float:left;
-  margin-right:10px;
-}
-
-	
     </style>
 	<script src="advisors.js"></script>
 </head>
 <body onload="getAdvisors('')">
-	<div class="header-container">
-    <header>
-        <img src="sculogo.jpg" width="100" height="100" alt="logo">
-    <h1 style="text-align: left; font-family:cursive; color: #7b1113">Santa Clara University</h1>
-    <h2 style="text-align: left; font-family:serif; font-weight:100;">SCHOOL OF ENGINEERING</h2>
-</header>
-</div>
-    <div class="topnav">
+	<header id="header-container">
+        <img src="embed/sculogo.jpg" width="100" height="100" alt="logo">
+        <div>
+            <h1 style="font-family: cursive; color: #7b1113">Santa Clara University</h1>
+            <h2 style="font-weight:100;">SCHOOL OF ENGINEERING</h2>
+        </div>
+    </header>
+
+    <div id="nav">
         <a class="active" href="#home">Home</a>
         <a href="#Advisor">Advisor</a>
         <a href="#TeamBuilding">Team Building</a>
-    </div> <br>
+    </div>
 
     <h1>Find Advisors</h1>
 
-<div id="formDiv">
-    <div class="right-box">
-		<h2>Filter</h2>
-		
-	<!-- List Advisors DO NOT TOUCH
+    <!-- List Advisors DO NOT TOUCH
 		 All content population is gonna exist in JS
 		 If you do want to work on this, head to advisors.js in function printAdvisors()
 		 This is because PHP things
 	-->
 	<div id="advisor-list"></div>
 
+	<div id="form">
+		<h2>Filter</h2>
 
 	<!-- Search & Filter Form 
 		 feel free to style and add inputs
@@ -50,27 +43,26 @@
 
 	
 
-	<form id="filters" method="get" action="">
-		<label for="search">Search:</label>
-		<input type="text" id="search" name="search">
+		<form id="filters" method="get" action="">
+			<label for="search">Search:</label>
+			<input type="text" id="search" name="search">
 
-		<p>Expertise</p>
-		<input type="checkbox" id="cen" name="Civil Engineering">
-		<label for="cen">Civil Engineering</label>
-		<br>
-		<input type="checkbox" id="ben" name="Bio-Engineering">
-		<label for="ben">Bio-Engineering</label>
-		<br>
-		<input type="checkbox" id="csen" name="Computer Science & Engineering">
-		<label for="csen">Computer Science & Engineering</label>
-		<br>
-		<input type="checkbox" id="wden" name="Web Design & Engineering">
-		<label for="wden">Web Design & Engineering</label> <br>
-		<br>
-		<input type="submit" value="Submit">
-	</form>
+			<p>Expertise</p>
+			<input type="checkbox" id="cen" name="Civil Engineering">
+			<label for="cen">Civil Engineering</label>
+			<br>
+			<input type="checkbox" id="ben" name="Bio-Engineering">
+			<label for="ben">Bio-Engineering</label>
+			<br>
+			<input type="checkbox" id="csen" name="Computer Science & Engineering">
+			<label for="csen">Computer Science & Engineering</label>
+			<br>
+			<input type="checkbox" id="wden" name="Web Design & Engineering">
+			<label for="wden">Web Design & Engineering</label> <br>
+			<br>
+			<input type="submit" value="Submit">
+		</form>
 	</div>
-</div>
 	
 	<!-- DO NOT TOUCH leave at bottom pls -->
 	<script>

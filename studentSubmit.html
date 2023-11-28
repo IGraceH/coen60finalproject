@@ -21,23 +21,23 @@
     <h1 style="text-align: center;">Student Information Form</h1>
     <p style="width: 50%; margin: 0 auto;">If you are looking for group members for Senior Design, please fill out the following form so your information will be displayed on a public Google sheet, allowing others to contact you; you can also check the Google sheet to see who is also looking for a group.</p>
     <br>
-    <div id="formDiv">
-        <form id="infoForm">
+    <div id="form">
+        <form id="student-form">
             <table>
                 <tr>
-                    <td><label for="fName">First Name:</label></td>
-                    <td><input type="text" name="fName" id="fName" class="mustInput" placeholder="Type in your first name"></td>
+                    <td><label for="fname">First Name:</label></td>
+                    <td><input type="text" name="fname" id="fname" class="input-field" placeholder="Type in your first name" required></td>
                 </tr>
                 <tr>
-                    <td><label for="lName">Last Name:</label></td>
-                    <td><input type="text" name="lName" id="lName" class="mustInput" placeholder="Type in your last name"></td>
+                    <td><label for="lname">Last Name:</label></td>
+                    <td><input type="text" name="lname" id="lname" class="input-field" placeholder="Type in your last name" required></td>
                 </tr>
                 <tr>
                     <td>
                         <label for="major">Major:</label>
                     </td>
                     <td>
-                        <select id="major" name="majorList" class="mustInput" style="width: 100%;">
+                        <select id="major" name="major-list" class="input-field" style="width: 100%;">
                             <option value="">Select a Major</option>
                             <option value="Bio">Bioengineering</option>
                             <option value="Civil">Civil Engineering</option>
@@ -51,24 +51,24 @@
                     </td>                    
                 </tr>
                 <tr>
-                    <td><label for="sEmail">SCU Email:</label></td>
-                    <td><input type="text" name="sEmail" id="sEmail" class="mustInput" placeholder="Type in your scu email"></td>
+                    <td><label for="email">SCU Email:</label></td>
+                    <td><input type="text" name="email" id="email" class="input-field" placeholder="Type in your SCU email"></td>
                 </tr>
                 <tr>
-                    <td><label for="sInterest">Interest:</label></td>
-                    <td><input type="text" name="sInterest" id="sInterest" class="mustInput" placeholder="Type in what your are interest in"></td>
+                    <td><label for="interest">Interest:</label></td>
+                    <td><input type="text" name="interest" id="interest" class="input-field" placeholder="Type in what your interests"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="checkbox" id="checkAgree">I agree all the information will be shown on public Google Sheets</td>
+                    <td colspan="2"><input id="check" type="checkbox">I agree all the information will be shown on a public Google Sheets</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit" value="Submit Form" id="submiting" onclick="submitFrom()"></td>
+                    <td colspan="2"><input id="submit-button" type="submit" value="Submit" onclick="submitFrom()"></td>
                 </tr>
             </table>
         </form>
     </div>
     <br><br>
-    <div id = "spreadSDiv">
+    <div id="student-spreadsheet">
         <iframe width = "800" height = "400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTsXgGx-hypOyiDthVQ1udv6QJGuIqwQVjs2KSUgiKYbW4xN09h6ZEkBN6cAU4QehxPrSFeU1RvDqcl/pubhtml?widget=true&amp;headers=false"></iframe>
     </div>
 </body>

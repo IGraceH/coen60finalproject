@@ -1,5 +1,4 @@
 <?php
-    // extract($_GET)
     $file = "studentList.txt";
     $contents = explode("\n", trim(file_get_contents($file)));
     $infos = explode(",", trim($_GET["info"]));

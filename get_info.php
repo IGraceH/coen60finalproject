@@ -1,6 +1,5 @@
 <?php
     $file = "studentList.txt";
-    $file2 = "studentList2.txt";
     file_put_contents($file, $_GET["info"] . "\n", FILE_APPEND);
     $contents = explode("\n", trim(file_get_contents($file)));
 

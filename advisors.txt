@@ -1,3 +1,11 @@
 Bill Lu | blu2@scu.edu | 408-551-3510 | Associate Professor | Bioengineering | SCDI 3311B
 Maryam Mobed-Miremadi | mmobedmiremadi@scu.edu | 408-554-2731  | Senior Lecturer | Bioengineering | SCDI 2103
 Aria Amirbahman | aamirbahman@scu.edu | 408-551-3515 | Chair and Professor | Civil Engineering | SCDI 2208B
+Reynaud Serrette | rserrette@scu.edu | 408-554-6868 | Professor | Civil Engineering | SCDI 2208J
+Behnam Dezfouli | bdezfouli@scu.edu | 408-551-1634 | Associate Professor | Computer Science and Engineering, Robotics | Bergin 115
+Silvia Figueira | sfigueira@scu.edu | 408-554-4105 | Chair and Professor | Computer Science and Engineering | Bergin 103
+Christopher Kitts | ckitts@scu.edu | 408-554-4382 | Professor, William and Janice Terry Professor, Director of Robotics Systems Laboratory | Mechanical Engineering, Aerospace Engineering, Robotics | SCDI 3311G
+Kurt Schab | kschab@scu.edu | 408-551-3342 | Assistant Professor | Electrical and Computer Engineering | SCDI 4025L
+Tokunbo Ogunfunmi | togunfunmi@scu.edu | 408-554-4481 | Professor | Electrical and Computer Engineering, Robotics | SCDI 4025J
+Hohyun Lee | hlee@scu.edu | 408-554-5283 | Chair and Professor | Mechanical Engineering | SCDI 3311L
+Ashley Kim | ukim@scu.edu | 408-554-2760 | Associate Professor | Bioengineering | SCDI 3311F

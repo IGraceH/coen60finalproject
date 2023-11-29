@@ -164,7 +164,6 @@ th {
 
 .advisor-main {
   width: 80vw;
-  height: auto;
   border: none;
   display: flex;
   gap: 40px;
@@ -191,10 +190,8 @@ th {
   scrollbar-width: none;  /* Firefox */
 }
 
-#advisor-table td {
-  border-collapse: collapse;
-  width: 40vw;
-  min-width: 400px;
+#advisor-list {
+  margin-bottom: 100px;
 }
 
 #advisor-table {
@@ -202,8 +199,12 @@ th {
 }
 
 #advisor-table td {
+  border-collapse: collapse;
+  width: 40vw;
+  min-width: 400px;
   background-color: white;
   padding: 20px;
+
 }
 
 #advisor-table h2 {

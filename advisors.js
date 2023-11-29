@@ -39,7 +39,7 @@ function processContent(content) {
  * Feel free to edit html and added css classes how you please
  */
 function printAdvisors(advisors) {
-	let content = "";
+	let content = `<p><i>${advisors.length} results</i></p>`;
 
 	content += "<table id='advisor-table'><tbody>";
 	for (let advisor of advisors) {

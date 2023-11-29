@@ -99,7 +99,7 @@ hr {
 }
 
 
-#submit-button {
+.submit-button {
   background-color: black;
   border-radius: 5px;
   color: white;
@@ -114,14 +114,14 @@ hr {
   box-shadow: 0 3px #999;
 }
 
-#submit-button:hover {
+.submit-button:hover {
   font-size: medium;
   color: white;
   border: none;
   opacity: .4;
 }
 
-#submit-button:active {
+.submit-button:active {
   box-shadow: 0 3px black;
   transform: translateX(-50%) translateY(2px);
 }
@@ -160,6 +160,16 @@ th {
   color:white;
   text-align:center;
   padding:20px;
+}
+
+.advisor-main {
+  width: 80vw;
+  height: auto;
+  border: none;
+  display: flex;
+  gap: 40px;
+  left: 10vw;
+  position: relative;
 }
 
 #advisor-filter {

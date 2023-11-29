@@ -46,7 +46,16 @@ function printAdvisors(advisors) {
 		content += `<tr><td>
 				<h2>${advisor.name}</h2>${advisor.email}
 				<div class='table-info-line'></div>
-				<p>${advisor.department}</p>
+				<table class="advisor-info">
+					<tr>
+						<td>${advisor.title}</td>
+						<td>${advisor.phone}</td>
+					</tr>
+					<tr>
+						<td>${advisor.department}</td>
+						<td>${advisor.office}</td>
+					</tr>
+				</table>
 			</td></tr>`;
 	}
 	content += "</tbody></table>";

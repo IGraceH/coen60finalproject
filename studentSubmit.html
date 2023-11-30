@@ -71,8 +71,7 @@
     </div>
     <br><br>
     <div id="spreadsheet">
-        <table id="student-table">
-        </table>
+        <table id="student-table"></table>
     </div>
     <script>
         document.getElementById("student-form").addEventListener('submit', function(event) {
@@ -84,11 +83,9 @@
                     info.push(form[i].value);
                 }
                 var str = "info=";
-                for (let i = 0; i < info.length; i++) {
-                    if (info[i] != "on" && info[i] != "Submit" && info[i] != "") {
-                        str += info[i];
-                    }
-                    if (i != info.length - 1) {
+                for (let i = 0; i < 5; i++) {
+                    str += info[i];
+                    if (i != 4) {
                         str += ",";
                     }
                 }

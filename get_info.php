@@ -1,24 +1,16 @@
 <?php
     $file = "studentList.txt";
+    file_put_contents($file, $_GET["info"] . "\n", FILE_APPEND);
     $contents = explode("\n", trim(file_get_contents($file)));
-    $infos = explode(",", trim($_GET["info"]));
 
     $return_str = "<table><tr><th>First Name</th><th>Last Name</th><th>Major</th><th>SCU Email</th><th>Interest</th></tr>";
-    foreach ($contents as $initItems) {
-        $return_str .= $initItems;
-    }
-
-    $table_items = "<tr>";
-    foreach ($infos as $elem) {
-        if ($elem != "") {
-            $table_items .= "<td>" . $elem . "</td>";
+    foreach ($contents as $lines) {
+        $return_str .= "<tr>";
+        foreach (explode(",", trim($lines)) as $elem) {
+            $return_str .= "<td>" . $elem . "</td>";
         }
+        $return_str .= "</tr>";
     }
-    $table_items .= "</tr>\n";
-    $return_str .= $table_items;
-
     $return_str .= "</table>";
-
-    file_put_contents($file, $table_items, FILE_APPEND);
     echo $return_str;
 ?>

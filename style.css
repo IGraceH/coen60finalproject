@@ -99,7 +99,7 @@ hr {
 }
 
 
-#submit-button {
+.submit-button {
   background-color: black;
   border-radius: 5px;
   color: white;
@@ -114,14 +114,14 @@ hr {
   box-shadow: 0 3px #999;
 }
 
-#submit-button:hover {
+.submit-button:hover {
   font-size: medium;
   color: white;
   border: none;
   opacity: .4;
 }
 
-#submit-button:active {
+.submit-button:active {
   box-shadow: 0 3px black;
   transform: translateX(-50%) translateY(2px);
 }
@@ -162,7 +162,18 @@ th {
   padding:20px;
 }
 
+.advisor-main {
+  width: 80vw;
+  border: none;
+  display: flex;
+  gap: 40px;
+  left: 10vw;
+  position: relative;
+}
+
 #advisor-filter {
+  position: -webkit-sticky;
+  position: sticky;
   justify-content: center;
   border: 1px solid black;
   border-radius: 50px;
@@ -170,21 +181,17 @@ th {
   width: 300px;
   height: calc(100vh - 350px);
   overflow-y: auto;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 #advisor-filter::-webkit-scrollbar {
     display: none;
 }
 
-#advisor-filter {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-#advisor-table table, #advisor-table th, #advisor-table td {
-  border-collapse: collapse;
-  width: 40vw;
-  min-width: 400px;
+#advisor-list {
+  margin-bottom: 100px;
 }
 
 #advisor-table {
@@ -192,8 +199,12 @@ th {
 }
 
 #advisor-table td {
+  border-collapse: collapse;
+  width: 40vw;
+  min-width: 400px;
   background-color: white;
   padding: 20px;
+
 }
 
 #advisor-table h2 {
@@ -205,4 +216,10 @@ th {
   background-color: #7b1113;
   width: 100%;
   height: 2px;
+}
+
+#advisor-table .advisor-info td {
+  width: auto;
+  min-width: 200px;
+  padding: 5px;
 }

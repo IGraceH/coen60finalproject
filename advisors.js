@@ -21,9 +21,17 @@ function processContent(content) {
 		content = content.split('","')
 		for (let item of content) {
 			item = item.split(" | ");
-			advisors.push({name: item[0], email: item[1], expertise: item[2]});
+			advisors.push({
+				name: item[0],
+				email: item[1],
+				phone: item[2],
+				title: item[3],
+				department: item[4],
+				office: item[5]
+			});
 		}
 	}
+
 	return advisors;
 }
 
@@ -31,14 +39,23 @@ function processContent(content) {
  * Feel free to edit html and added css classes how you please
  */
 function printAdvisors(advisors) {
-	let content = "";
+	let content = `<p><i>${advisors.length} results</i></p>`;
 
 	content += "<table id='advisor-table'><tbody>";
 	for (let advisor of advisors) {
 		content += `<tr><td>
 				<h2>${advisor.name}</h2>${advisor.email}
 				<div class='table-info-line'></div>
-				<p>${advisor.expertise}</p>
+				<table class="advisor-info">
+					<tr>
+						<td>${advisor.title}</td>
+						<td>${advisor.phone}</td>
+					</tr>
+					<tr>
+						<td>${advisor.department}</td>
+						<td>${advisor.office}</td>
+					</tr>
+				</table>
 			</td></tr>`;
 	}
 	content += "</tbody></table>";

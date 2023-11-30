@@ -33,5 +33,7 @@ if ($search != "") {
 	$search_results = $contents;
 }
 
+sort($search_results);
+
 echo json_encode($search_results);
 ?>

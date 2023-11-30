@@ -172,6 +172,8 @@ th {
 }
 
 #advisor-filter {
+  position: -webkit-sticky;
+  position: sticky;
   justify-content: center;
   border: 1px solid black;
   border-radius: 50px;
@@ -179,15 +181,13 @@ th {
   width: 300px;
   height: calc(100vh - 350px);
   overflow-y: auto;
+
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 #advisor-filter::-webkit-scrollbar {
     display: none;
-}
-
-#advisor-filter {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
 }
 
 #advisor-list {

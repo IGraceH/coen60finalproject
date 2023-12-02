@@ -1,33 +1,41 @@
-function submitFrom() {
-  let inputs = document.querySelectorAll('.input-field');
-  let checkMajor = document.getElementById('major');
-  let checkUAgree = document.getElementById('check');
-  let emailCheck = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  for (let input of inputs) {
-    if (!input.value.trim()) {
-      alert('Please fill in all information');
-      return 0;
-    }
+function validateForm() {
+  var username = document.getElementById('username').value;
+  var email = document.getElementById('email').value;
+  var major = document.getElementById('major').value;
+  var password = document.getElementById('password').value;
+
+  if (!username || !email || !major || !password) {
+      alert("Please fill in all fields");
+      return false;
   }
-  if (!emailCheck.test(document.getElementById('email').value)) {
-    alert('Please enter a valid email address');
-    return 0;
+
+  if (username.length >= 10) {
+      alert("Username must be less than 10 characters");
+      return false;
   }
-  if (!checkUAgree.checked) {
-    alert('Please agree to the terms');
-    return 0;
+
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address");
+      return false;
   }
-  alert('Form submitted successfully!');
-  return 1;
-}
+
+  var passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{8,}$/;
+  if (!passwordRegex.test(password)) {
+      alert("Password must be at least 8 characters and contain at least 1 digit");
+      return false;
+  }
+
+  return true;
+};
 
 function updateTable(str) {
-var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("student-table").innerHTML = this.responseText;
-    }
-  }
-  xmlhttp.open("GET", "get_info.php?"+str, true);
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("student-table").innerHTML = this.responseText;
+      }
+  };
+  xmlhttp.open("GET", "get_info.php?" + str, true);
   xmlhttp.send();
 }

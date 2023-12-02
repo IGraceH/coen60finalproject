@@ -2,7 +2,7 @@
     $file = "studentList.txt";
     // $debugF = "debugFile.txt";
     $currentEntry = trim($_GET["info"]); // current entry in string format
-    $currentEntryList = explode(",", trim($_GET["info"])); // current entry in list format
+    $currentEntryList = explode(":;", trim($_GET["info"])); // current entry in list format
 
     $duplicate = false;
     $contents = explode("\n", trim(file_get_contents($file)));
@@ -10,7 +10,7 @@
     
     // go through each line from file, check if there are any duplicate emails
     foreach ($contents as $lines) {
-        $one = explode(",", trim($lines));
+        $one = explode(":;", trim($lines));
         $major = $one[2];
         $return_str .= "<tr class=" . $major . ">";
         foreach ($one as $elem) {

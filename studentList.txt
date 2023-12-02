@@ -1,16 +1,16 @@
-Cathy,Chen,BIOE,cc@scu.edu,Immuno-anti-infective Drug Design
-Chris,Olson,BIOE,co@scu.edu,Exosomes for Drug Delivery
-Noah,Wong,CESE,nw@scu.edu,Street Designs
-Claire,Russon,CESE,cr@scu.edu,Well Water Purification
-David,Krakauer,CSEN,dk@scu.edu,Emotional Regulation with AI
-Jeremy,Reyes,CSEN,jr@scu.edu,Therapy Bot
-Vivek,Ponnala,WDE,vp@scu.edu,Blockchains
-Alex,Fang,WDE,af@scu.edu,Tracking App
-Ryan,Marquis,ESEN,rm@scu.edu,Hot Car Alert System
-Kurt,Williams,ESEN,kw@scu.edu,Micro-grids
-Kwadwo,Amaoko,ELEN,ka@scu.edu,Health Management
-Ivy,Chung,ELEN,ic@scu.edu,Crop Disease detection
-Noah,Villar,GENE,nv@scu.edu,Arm Attachment
-Andrew,Lemus,GENE,al@scu.edu,Intelligent Filters
-Joe,Galang,MECH,jg@scu.edu,Agricultural Robots
-Reid,Whitney,MECH,rw@scu.edu,Crash Vehicles
+Cathy:;Chen:;BIOE:;cc@scu.edu:;Immuno-anti-infective Drug Design
+Chris:;Olson:;BIOE:;co@scu.edu:;Exosomes for Drug Delivery
+Noah:;Wong:;CESE:;nw@scu.edu:;Street Designs
+Claire:;Russon:;CESE:;cr@scu.edu:;Well Water Purification
+David:;Krakauer:;CSEN:;dk@scu.edu:;Emotional Regulation with AI
+Jeremy:;Reyes:;CSEN:;jr@scu.edu:;Therapy Bot
+Vivek:;Ponnala:;WDE:;vp@scu.edu:;Blockchains
+Alex:;Fang:;WDE:;af@scu.edu:;Tracking App
+Ryan:;Marquis:;ESEN:;rm@scu.edu:;Hot Car Alert System
+Kurt:;Williams:;ESEN:;kw@scu.edu:;Micro-grids
+Kwadwo:;Amaoko:;ELEN:;ka@scu.edu:;Health Management
+Ivy:;Chung:;ELEN:;ic@scu.edu:;Crop Disease detection
+Noah:;Villar:;GENE:;nv@scu.edu:;Arm Attachment
+Andrew:;Lemus:;GENE:;al@scu.edu:;Intelligent Filters
+Joe:;Galang:;MECH:;jg@scu.edu:;Agricultural Robots
+Reid:;Whitney:;MECH:;rw@scu.edu:;Crash Vehicles

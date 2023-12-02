@@ -6,7 +6,7 @@
 
     $duplicate = false;
     $contents = explode("\n", trim(file_get_contents($file)));
-    $return_str = "<table><tr><th>First Name</th><th>Last Name</th><th>Major</th><th>SCU Email</th><th>Interest</th></tr>";
+    $return_str = "<table><tr><th class=student-table-header>First Name</th><th class=student-table-header>Last Name</th><th class=student-table-header>Major</th><th class=student-table-header>SCU Email</th><th class=student-table-header>Interest</th></tr>";
     
     // go through each line from file, check if there are any duplicate emails
     foreach ($contents as $lines) {
@@ -24,7 +24,7 @@
 
     // if a duplicated email is not found, add current entry to table & text file
     // otherwise, skip the line and return the current file contents
-    if ($duplicate == false) {
+    if ($duplicate == false && sizeOf($currentEntryList) == 5) {
         $major = $currentEntryList[2];
         $return_str .= "<tr class=" . $major . ">";
         foreach ($currentEntryList as $items) {
@@ -35,7 +35,6 @@
     } 
     $return_str .= "</table>";
     
-    // file_put_contents($debugF, $return_str . "\n", FILE_APPEND);
     // return file contents + new entry (if not duplicate) in HTML table format
     echo $return_str;
 ?>

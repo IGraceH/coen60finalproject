@@ -145,24 +145,27 @@ hr {
 #spreadsheet {
   justify-content: center;
   display:flex;
+  height:400px;
 }
 
 #student-table {
   display:flex;
   background-color: white;
-  border-collapse:collapse;
   text-align: left;
+  overflow:scroll;
 }
 
 .student-table-items {
   padding:10px;
 }
 
-th {
+.student-table-header {
   background-color: #999;
+  border-radius:5px;
   color:white;
-  text-align:center;
+  text-align:left;
   padding:20px;
+  font-size:larger;
 }
 
 .advisor-main {

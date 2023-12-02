@@ -74,6 +74,10 @@
         <table id="student-table"></table>
     </div>
     <script>
+        const form = document.getElementById("student-form").elements;
+        var str = "info=";
+        updateTable(str);
+
         document.getElementById("student-form").addEventListener('submit', function(event) {
             event.preventDefault();
             if (submitFrom()) {

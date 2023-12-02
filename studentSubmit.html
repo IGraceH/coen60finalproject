@@ -19,83 +19,78 @@
         <a href="advisors.html">Advisor</a>
         <a class="active" href="studentSubmit.html">Team Building</a>
     </div>
-    
-    <h1 style="text-align: center;">Student Information Form</h1>
-    <p style="width: 50%; margin: 0 auto;">If you are looking for group members for Senior Design, please fill out the following form so your information will be displayed on a public spread sheet, allowing others to contact you; you can also check the spread sheet to see who is also looking for a group.</p>
+    <h1 style="text-align: center;">Welcome To Senior Design Team Formation Support</h1>
+    <hr>
     <br>
-    <div id="form">
-        <form id="student-form" method="get" action="">
-            <table>
-                <tr>
-                    <td><label for="fname">First Name:</label></td>
-                    <td><input type="text" name="fname" id="fname" class="input-field" placeholder="Type in your first name" required></td>
-                </tr>
-                <tr>
-                    <td><label for="lname">Last Name:</label></td>
-                    <td><input type="text" name="lname" id="lname" class="input-field" placeholder="Type in your last name" required></td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="major">Major:</label>
-                    </td>
-                    <td>
-                        <select id="major" name="major-list" class="input-field" style="width: 100%;">
-                            <option value="">Select a Major</option>
-                            <option value="BIOE">Bioengineering</option>
-                            <option value="CESE">Civil Engineering</option>
-                            <option value="CSEN">Computer Science and Engineering</option>
-                            <option value="ECEN">Electrical and Computer Engineering</option>
-                            <option value="ELEN">Electrical Engineering</option>
-                            <option value="GENE">General Engineering</option>
-                            <option value="MECH">Mechanical Engineering</option>
-                            <option value="WDE">Web Design and Engineering</option>
-                        </select>
-                    </td>                    
-                </tr>
-                <tr>
-                    <td><label for="email">SCU Email:</label></td>
-                    <td><input type="text" name="email" id="email" class="input-field" placeholder="Type in your SCU email"></td>
-                </tr>
-                <tr>
-                    <td><label for="interest">Interest:</label></td>
-                    <td><input type="text" name="interest" id="interest" class="input-field" placeholder="Type in what your interests"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input id="check" type="checkbox">I agree all the information will be shown on a public spread sheet</td>
-                </tr>
-                <tr>
-                    <td colspan="2"><input class="submit-button" type="submit" value="Submit"></td>
-                </tr>
-            </table>
-        </form>
+    <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
+        <div style="width:30%; height:350px; border:1px solid black; border-radius: 50px;">
+            <h2 style="text-align: center;"></h2>
+            <form onsubmit="return validateForm()">
+                <div style="margin-left:10%;">
+                    <label><h3>Any topic your're interest in?</h3></label>
+                    <input id="username" style="width:85%; height:30px" type="text" name="username"><br><br>
+                </div>
+                <input class="submit-button" type="submit" value="Update Interest">
+            </form>
+            <form>
+                <div style="margin-left: 10%;">
+                    <h3>Want to remove your account?</h3>
+                    <input type="checkbox">
+                    <label style="font-size: medium;;">Know that once your account is deleted, your information will not be shown anymore</label>
+                </div>
+                <br>
+                <input class="submit-button" type="submit" value="Delete Account">
+            </form>
+        </div>
+        <div style="width:55%; height:350px; border:1px solid black; border-radius: 50px;">
+            <h1 style="text-align: center;">Your're Logged in!</h1><br>
+            <h3 id="usersName"></h3><br>
+            <h3 id="usersMajor"></h3><br>
+            <h3 id="usersEmail"></h3><br>
+            <h3 id="usersInterest"></h3><br>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
+        <div style="width:30%; height:450px; border:1px solid black; border-radius: 50px;">
+            <h2 style="text-align: center;">Major Filter</h2>
+                <form id="filters" method="get" style="font-size: larger;">
+                    <div style="margin-left: 10%;">
+                    <label for="search">Search:</label>
+                    <input style="width:85%; height:30px" class="input-field" type="text" name="search">
+                    <br>
+                    <p>Department:</p>
+                    <input type="checkbox" id="ben" name="Bioengineering">
+                    <label for="ben">Bioengineering</label>
+                    <br>
+                    <input type="checkbox" id="cen" name="Civil Engineering">
+                    <label for="cen">Civil Engineering</label>
+                    <br>
+                    <input type="checkbox" id="csen" name="Computer Science and Engineering">
+                    <label for="csen">Computer Science and Engineering</label>
+                    <br>
+                    <input type="checkbox" id="ecen" name="Electrical and Computer Engineering">
+                    <label for="ece">Electrical and Computer Engineering</label>
+                    <br>
+                    <input type="checkbox" id="gen" name="General Engineering">
+                    <label for="gen">General Engineering</label>
+                    <br>
+                    <input type="checkbox" id="mech" name="Mechanical Engineering">
+                    <label for="mech">Mechanical Engineering</label>
+                    <br><br>
+                    </div>
+                    <input class="submit-button" type="submit" value="Submit">
+                </form>
+        </div>
+        <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px;">
+            <h1 style="text-align: center;">Megu, please paste the table here!</h1>
+        </div>
     </div>
     <br><br>
     <div id="spreadsheet">
         <table id="student-table"></table>
     </div>
-    <script>
-        const form = document.getElementById("student-form").elements;
-        var str = "info=";
-        updateTable(str);
-
-        document.getElementById("student-form").addEventListener('submit', function(event) {
-            event.preventDefault();
-            if (submitFrom()) {
-                const form = document.getElementById("student-form").elements;
-                let info = [];
-                for (let i = 0; i < form.length; i++) {
-                    info.push(form[i].value);
-                }
-                var str = "info=";
-                for (let i = 0; i < 5; i++) {
-                    str += info[i];
-                    if (i != 4) {
-                        str += ":;";
-                    }
-                }
-                updateTable(str);
-            }
-        });
-    </script>
 </body>
 </html>

@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script type="text/javascript" src="studentForm.js"></script>  
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+    <header id="header-container">
+        <img src="embed/sculogo.jpg" width="100" height="100" alt="logo">
+        <div>
+            <h1 style="font-family: cursive; color: #7b1113">Santa Clara University</h1>
+            <h2 style="font-weight:100;">SCHOOL OF ENGINEERING</h2>
+        </div>
+    </header>
+
+    <div id="nav">
+        <a href="homepage.html">Home</a>
+        <a href="advisors.html">Advisor</a>
+        <a class="active" href="studentSubmit.html">Team Building</a>
+    </div>
+    <br>
+    <h1 style="text-align: center;">Welcome To Senior Design Team Formation Support</h1>
+    <hr>
+    <br>
+    <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
+        <div style="width:30%; height:450px; border:1px solid black; border-radius: 50px;">
+            <h2 style="text-align: center;">Login/Register</h2>
+            <form onsubmit="return validateForm()">
+                <div style="margin-left:10%;">
+                    <label style="font-size: larger;">Username</label><br>
+                    <input id="username" style="width:85%; height:30px" type="text" name="username"><br><br>
+                    <label style="font-size: larger;">SCU Email</label><br>
+                    <input id="email" style="width:85%; height:30px" type="text" name="email"><br><br>
+                    <label style="font-size: larger;">Your Major</label>
+                    <select id="major" name="major-list" style="width: 87%; height:35px">
+                        <option value="">Select a Major</option>
+                        <option value="BIOE">Bioengineering</option>
+                        <option value="CESE">Civil Engineering</option>
+                        <option value="CSEN">Computer Science and Engineering</option>
+                        <option value="ECEN">Electrical and Computer Engineering</option>
+                        <option value="ELEN">Electrical Engineering</option>
+                        <option value="GENE">General Engineering</option>
+                        <option value="MECH">Mechanical Engineering</option>
+                        <option value="WDE">Web Design and Engineering</option>
+                    </select><br><br>
+                    <label style="font-size: larger;">Password</label><br>
+                    <input id="password" style="width:85%; height:30px" type="password" name="password"><br><br>
+                </div>
+                <input class="submit-button" type="submit" value="Submit">
+            </form>
+        </div>
+        <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px; background-color:bisque;">
+            <h2 style="text-align: center;">Account Information</h2>
+            <ul style="font-size: larger;">
+                <li>If you already have a account, just type in your information to login. If you don't have a account, please fill in the following information and click submit</li><br>
+                <li>Username Requirement: The length of the username should be less then 10 characters(Your username cannot be changed after being set)</li><br>
+                <li>Email Requirement: Only enter your SCU email, since all your email can be seen by others(Your email cannot be changed after being set)</li><br>
+                <li>Password Requirement: At least 8 characters and at least 1 digit(Your password cannot be changed after being set)</li><br>
+                <li>Major Requirement: Select your major(Your major cannot be changed after being set)</li><br>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
+        <div style="width:30%; height:450px; border:1px solid black; border-radius: 50px;">
+            <h2 style="text-align: center;">Major Filter</h2>
+                <form id="filters" method="get" style="font-size: larger;">
+                    <div style="margin-left: 10%;">
+                    <label for="search">Search:</label>
+                    <input style="width:85%; height:30px" class="input-field" type="text" name="search">
+                    <br>
+                    <p>Department:</p>
+                    <input type="checkbox" id="ben" name="Bioengineering">
+                    <label for="ben">Bioengineering</label>
+                    <br>
+                    <input type="checkbox" id="cen" name="Civil Engineering">
+                    <label for="cen">Civil Engineering</label>
+                    <br>
+                    <input type="checkbox" id="csen" name="Computer Science and Engineering">
+                    <label for="csen">Computer Science and Engineering</label>
+                    <br>
+                    <input type="checkbox" id="ecen" name="Electrical and Computer Engineering">
+                    <label for="ece">Electrical and Computer Engineering</label>
+                    <br>
+                    <input type="checkbox" id="gen" name="General Engineering">
+                    <label for="gen">General Engineering</label>
+                    <br>
+                    <input type="checkbox" id="mech" name="Mechanical Engineering">
+                    <label for="mech">Mechanical Engineering</label>
+                    <br><br>
+                    </div>
+                    <input class="submit-button" type="submit" value="Submit">
+                </form>
+        </div>
+        <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px;">
+            <h1 style="text-align: center;">Megu, please paste the table here!</h1>
+        </div>
+    </div>
+</body>
+</html>
 

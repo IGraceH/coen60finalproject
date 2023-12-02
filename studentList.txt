@@ -14,8 +14,3 @@ Noah:;Villar:;GENE:;nv@scu.edu:;Arm Attachment
 Andrew:;Lemus:;GENE:;al@scu.edu:;Intelligent Filters
 Joe:;Galang:;MECH:;jg@scu.edu:;Agricultural Robots
 Reid:;Whitney:;MECH:;rw@scu.edu:;Crash Vehicles
-
-
-
-
-

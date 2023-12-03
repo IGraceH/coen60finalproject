@@ -25,11 +25,11 @@
     <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
         <div style="width:30%; height:300px; border:1px solid black; border-radius: 50px;">
             <h2 style="text-align: center;">Login/Register</h2>
-            <form onsubmit="return validateForm()">
+            <form id = "login-form" method = "get" action = "">
                 <div style="margin-left:10%;">
-                    <label style="font-size: larger;">SCU Email</label><br>
+                    <label for="email" style="font-size: larger;">SCU Email</label><br>
                     <input id="email" style="width:85%; height:30px" type="text" name="email"><br><br>
-                    <label style="font-size: larger;">Password</label><br>
+                    <label for="password" style="font-size: larger;">Password</label><br>
                     <input id="password" style="width:85%; height:30px" type="password" name="password"><br><br>
                 </div>
                 <input class="submit-button" type="submit" value="Submit">
@@ -79,9 +79,32 @@
                 </form>
         </div>
         <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px;">
-            <h1 style="text-align: center;">Megu, please paste the table here!</h1>
+            <table id = "student-table"></div>
         </div>
     </div>
+    <script>
+        const form = document.getElementById("login-form").elements;
+        var str = "info=";
+        updateTable(str);
+        document.getElementById("login-form").addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (validateForm()) {
+                const form = document.getElementById("student-form").elements;
+                let info = [];
+                for (let i = 0; i < form.length; i++) {
+                    info.push(form[i].value);
+                }
+                var str = "info=";
+                for (let i = 0; i < 5; i++) {
+                    str += info[i];
+                    if (i != 4) {
+                        str += ":;";
+                    }
+                }
+                updateTable(str);
+            }
+        });
+    </script>
 </body>
 </html>
 

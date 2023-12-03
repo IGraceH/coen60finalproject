@@ -112,13 +112,35 @@
       </form>
     </div>
     <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px;">
-      <h1 style="text-align: center;">Megu, please paste the table here!</h1>
+      <table id = "student-table"></div>
     </div>
   </div>
   <br><br>
   <div id="spreadsheet">
     <table id="student-table"></table>
   </div>
+  <script>
+    const form = document.getElementById("login-form").elements;
+    var str = "info=";
+    updateTable(str);
+    document.getElementById("login-form").addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (validateForm()) {
+            const form = document.getElementById("student-form").elements;
+            let info = [];
+            for (let i = 0; i < form.length; i++) {
+                info.push(form[i].value);
+            }
+            var str = "info=";
+            for (let i = 0; i < 5; i++) {
+                str += info[i];
+                if (i != 4) {
+                    str += ":;";
+                }
+            }
+            updateTable(str);
+        }
+    });
+</script>
 </body>
-
 </html>

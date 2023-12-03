@@ -1,0 +1,23 @@
+<script>
+        const form = document.getElementById("student-form").elements;
+        var str = "info=";
+        updateTable(str);
+        document.getElementById("student-form").addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (submitFrom()) {
+                const form = document.getElementById("student-form").elements;
+                let info = [];
+                for (let i = 0; i < form.length; i++) {
+                    info.push(form[i].value);
+                }
+                var str = "info=";
+                for (let i = 0; i < 5; i++) {
+                    str += info[i];
+                    if (i != 4) {
+                        str += ":;";
+                    }
+                }
+                updateTable(str);
+            }
+        });
+    </script>

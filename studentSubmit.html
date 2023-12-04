@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream
   <header id="header-container">
     <img src="embed/sculogo.jpg" width="100" height="100" alt="logo">
     <div>
@@ -46,6 +47,68 @@
             </select><br><br>
           </div>
           <input class="submit-button" type="submit" value="Update Major">
+=======
+    <div class="header-container">
+    <header>
+        <img src="sculogo.jpg" width="100" height="100" alt="logo">
+    <h1 style="text-align: left; font-family:cursive; color: #7b1113">Santa Clara University</h1>
+    <h2 style="text-align: left; font-family:serif; font-weight:100;">SCHOOL OF ENGINEERING</h2>
+</header>
+</div>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#Advisor">Advisor</a>
+        <a href="#TeamBuilding">Team Building</a>
+    </div> <br>
+    
+    <h1 style="text-align: center;">Student Information Form</h1>
+    <p style="width: 50%; margin: 0 auto;">If you are looking for group members for Senior Design, please fill out the following form so your information will be displayed on a public Google sheet, allowing others to contact you; you can also check the Google sheet to see who is also looking for a group.</p>
+    <br> <br> <br>
+    <div id="formDiv">
+        <form id="infoForm">
+            <table>
+                <tr>
+                    <td><label for="fName">First Name:</label></td>
+                    <td><input type="text" name="fName" id="fName" class="mustInput" placeholder="Type in your first name"></td>
+                </tr>
+                <tr>
+                    <td><label for="lName">Last Name:</label></td>
+                    <td><input type="text" name="lName" id="lName" class="mustInput" placeholder="Type in your last name"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="major">Major:</label>
+                    </td>
+                    <td>
+                        <select id="major" name="majorList" class="mustInput" style="width: 100%;">
+                            <option value="">Select a Major</option>
+                            <option value="Bio">Bioengineering</option>
+                            <option value="Civil">Civil Engineering</option>
+                            <option value="CSE">Computer Science and Engineering</option>
+                            <option value="ECE">Electrical and Computer Engineering</option>
+                            <option value="ELEN">Electrical Engineering</option>
+                            <option value="General">General Engineering</option>
+                            <option value="Mechanical">Mechanical Engineering</option>
+                            <option value="WDE">Web Design and Engineering</option>
+                        </select>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td><label for="sEmail">SCU Email:</label></td>
+                    <td><input type="text" name="sEmail" id="sEmail" class="mustInput" placeholder="Type in your scu email"></td>
+                </tr>
+                <tr>
+                    <td><label for="sInterest">Interest:</label></td>
+                    <td><input type="text" name="sInterest" id="sInterest" class="mustInput" placeholder="Type in what your are interest in"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="checkbox" id="checkAgree">I agree all the information will be shown on public Google Sheets</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Submit Form" id="submiting" onclick="submitFrom()"></td>
+                </tr>
+            </table>
+>>>>>>> Stashed changes
         </form>
       </div>
       <form onsubmit="return validateForm()">

@@ -1,4 +1,4 @@
-function validateForm() {
+function validateLogin() {
     var email = document.getElementById("email").value;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -13,9 +13,9 @@ function validateForm() {
         return false;
     }
 
-    window.location.href = "studentSubmit.html";
+    // window.location.href = "studentSubmit.html";
     
-    return false;
+    return true;
 }
 
 function updateTable(str) {
@@ -26,5 +26,23 @@ function updateTable(str) {
         }
     };
     xmlhttp.open("GET", "get_info.php?" + str, true);
+    xmlhttp.send();
+}
+
+function setUser(str) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let response = this.responseText;
+            if (response == "1") {
+                window.location.href = "studentSubmit.html";
+            } else {
+                window.alert("Wrong password! Please retry again.");
+            }
+            // alert user: if the password is wrong, alert
+            // if the password is not wrong or is a new user, redirect to the new page
+        }
+    };
+    xmlhttp.open("GET", "get_user.php?" + str, true);
     xmlhttp.send();
 }

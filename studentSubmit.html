@@ -1,3 +1,8 @@
+<!-- README:
+    Things to check for before running login/studentSubmit webpages:
+    - have read/write access for the files: studentList.txt turned ON
+    - allow local cookies -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,15 +30,27 @@
   <hr>
   <br>
   <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
-    <div style="width:30%; height:450px; border:1px solid black; border-radius: 50px;">
+    <div style="width:30%; height:600px; border:1px solid black; border-radius: 50px;">
       <h2 style="text-align: center;"></h2>
       <div>
-        <form>
+        <form id = "info-form" method="get" action = "">
+          <div style="margin-left:10%;">
+            <label>
+              <h3>First Name</h3>
+            </label>
+            <input id="fname" style="width:85%; height:20px" type="text" name="fname" required><br><br>
+          </div>
+          <div style="margin-left:10%;">
+            <label>
+              <h3>Last Name</h3>
+            </label>
+            <input id="lname" style="width:85%; height:20px" type="text" name="lname" required><br><br>
+          </div>
           <div style="margin-left: 10%;">
             <label>
               <h3>Your Major</h3>
             </label>
-            <select id="major" name="major-list" style="width: 87%; height:35px">
+            <select id="major" name="major-list" style="width: 87%; height:25px" required>
               <option value="">Select a Major</option>
               <option value="BIOE">Bioengineering</option>
               <option value="CESE">Civil Engineering</option>
@@ -45,35 +62,30 @@
               <option value="WDE">Web Design and Engineering</option>
             </select><br><br>
           </div>
-          <input class="submit-button" type="submit" value="Update Major">
-        </form>
-      </div>
-      <form onsubmit="return validateForm()">
-        <div style="margin-left:10%;">
-          <label>
-            <h3>Any topic your're interest in?</h3>
-          </label>
-          <input id="username" style="width:85%; height:30px" type="text" name="username"><br><br>
         </div>
-        <input class="submit-button" type="submit" value="Update Interest">
-      </form>
-      <form>
-        <div style="margin-left: 10%;">
-          <h3>Want to remove your account?</h3>
-          <input type="checkbox">
-          <label style="font-size: medium;;">Know that once your account is deleted, your information will not be shown
-            anymore</label>
-        </div>
-        <br>
-        <input class="submit-button" type="submit" value="Delete Account">
+          <div style="margin-left:10%;">
+            <label>
+              <h3>Any topic your're interest in?</h3>
+            </label>
+            <input id="username" style="width:85%; height:20px" type="text" name="username" required><br><br>
+          </div>
+          <div style="margin-left: 10%;">
+            <h3>Want to remove your account?</h3>
+            <input type="checkbox" id="delete-check">
+            <label style="font-size: medium;;">Know that once your account is deleted, your information will not be shown
+              anymore</label>
+          </div>
+          <br>
+          <input class="submit-button" type="submit" value="Register/Update your info"> 
       </form>
     </div>
-    <div style="width:55%; height:450px; border:1px solid black; border-radius: 50px;">
+
+    <div style="width:55%; height:600px; border:1px solid black; border-radius: 50px;">
       <h1 style="text-align: center;">Your're Logged in!</h1><br>
       <div style="margin-left: 6%;">
         <h3 id="usersMajor" style="font-size: larger;">Your Major: Megu, please update their major here </h3><br>
         <h3 id="usersInterest" style="font-size: larger;">Your Interest: Megu, please update their interest here</h3><br>  
-        <h3 id="deleteInfo" style="font-size: larger;">About Deleting Account: If you already found or form a group, you can use the delete button to remove your account so your information will no longer be shown to the public</h3>
+        <h3 id="deleteInfo" style="font-size: larger;">About Deleting your Account: If you already found or form a group, you can use the delete button to remove your account so your information will no longer be shown to the public.</h3>
       </div>
     </div>
   </div>
@@ -89,23 +101,23 @@
           <input style="width:85%; height:30px" class="input-field" type="text" name="search">
           <br>
           <p>Department:</p>
-          <input type="checkbox" id="ben" name="Bioengineering">
-          <label for="ben">Bioengineering</label>
+          <input type="checkbox" id="BIOE" name="Bioengineering">
+          <label for="BIOE">Bioengineering</label>
           <br>
-          <input type="checkbox" id="cen" name="Civil Engineering">
-          <label for="cen">Civil Engineering</label>
+          <input type="checkbox" id="CESE" name="Civil Engineering">
+          <label for="CESE">Civil Engineering</label>
           <br>
-          <input type="checkbox" id="csen" name="Computer Science and Engineering">
-          <label for="csen">Computer Science and Engineering</label>
+          <input type="checkbox" id="CSEN" name="Computer Science and Engineering">
+          <label for="CSEN">Computer Science and Engineering</label>
           <br>
-          <input type="checkbox" id="ecen" name="Electrical and Computer Engineering">
-          <label for="ece">Electrical and Computer Engineering</label>
+          <input type="checkbox" id="CSEN" name="Electrical and Computer Engineering">
+          <label for="ECEN">Electrical and Computer Engineering</label>
           <br>
-          <input type="checkbox" id="gen" name="General Engineering">
-          <label for="gen">General Engineering</label>
+          <input type="checkbox" id="GENE" name="General Engineering">
+          <label for="GENE">General Engineering</label>
           <br>
-          <input type="checkbox" id="mech" name="Mechanical Engineering">
-          <label for="mech">Mechanical Engineering</label>
+          <input type="checkbox" id="MECH" name="Mechanical Engineering">
+          <label for="MECH">Mechanical Engineering</label>
           <br><br>
         </div>
         <input class="submit-button" type="submit" value="Submit">
@@ -116,30 +128,37 @@
     </div>
   </div>
   <br><br>
-  <div id="spreadsheet">
+  <!-- <div id="spreadsheet">
     <table id="student-table"></table>
-  </div>
+  </div> -->
   <script>
-    const form = document.getElementById("login-form").elements;
+    const form = document.getElementById("info-form").elements;
     var str = "info=";
     updateTable(str);
-    document.getElementById("login-form").addEventListener('submit', function(event) {
+    document.getElementById("info-form").addEventListener('submit', function(event) {
         event.preventDefault();
-        if (validateForm()) {
-            const form = document.getElementById("student-form").elements;
-            let info = [];
-            for (let i = 0; i < form.length; i++) {
-                info.push(form[i].value);
-            }
-            var str = "info=";
-            for (let i = 0; i < 5; i++) {
-                str += info[i];
-                if (i != 4) {
-                    str += ":;";
-                }
-            }
-            updateTable(str);
-        }
+        
+          alert('Form submitted successfully!');
+          const form = document.getElementById("info-form").elements;
+          let info = [];
+          for (let i = 0; i < 4; i++) {
+              info.push(form[i].value);
+          }
+          var deleteCheck = document.getElementById("delete-check");
+          if (deleteCheck.checked == true) {
+            info.push("1");
+          } else {
+            info.push("0");
+          }
+          var str = "info=";
+          for (let i = 0; i < 5; i++) {
+              str += info[i];
+              if (i != 4) {
+                  str += ":;";
+              }
+          }
+          updateTable(str);
+        
     });
 </script>
 </body>

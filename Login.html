@@ -1,3 +1,8 @@
+<!-- README:
+    Things to check for before running login/studentSubmit webpages:
+    - have read/write access for the files: studentList.txt turned ON
+    - allow local cookies -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,25 +88,24 @@
         </div>
     </div>
     <script>
-        const form = document.getElementById("login-form").elements;
         var str = "info=";
         updateTable(str);
         document.getElementById("login-form").addEventListener('submit', function(event) {
             event.preventDefault();
-            if (validateForm()) {
-                const form = document.getElementById("student-form").elements;
+            if (validateLogin()) {
+                const form = document.getElementById("login-form").elements;
                 let info = [];
                 for (let i = 0; i < form.length; i++) {
                     info.push(form[i].value);
                 }
-                var str = "info=";
-                for (let i = 0; i < 5; i++) {
+                var str = "user=";
+                for (let i = 0; i < 2; i++) {
                     str += info[i];
-                    if (i != 4) {
+                    if (i != 1) {
                         str += ":;";
                     }
                 }
-                updateTable(str);
+                setUser(str);
             }
         });
     </script>

@@ -225,7 +225,14 @@ hr {
 }
 
 #advisor-list {
-  margin-bottom: 100px;
+  height: 70vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#advisor-list::-webkit-scrollbar {
+    display: none;
 }
 
 #advisor-table {

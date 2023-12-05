@@ -27,7 +27,8 @@ function processContent(content) {
 				phone: item[2],
 				title: item[3],
 				department: item[4],
-				office: item[5]
+				office: item[5],
+				link: item[6]
 			});
 		}
 	}
@@ -44,7 +45,7 @@ function printAdvisors(advisors) {
 	content += "<table id='advisor-table'><tbody>";
 	for (let advisor of advisors) {
 		content += `<tr><td>
-				<h2>${advisor.name}</h2>${advisor.email}
+				<h2><a href="${advisor.link}">${advisor.name}</a></h2>${advisor.email}
 				<div class='table-info-line'></div>
 				<table class="advisor-info">
 					<tr>

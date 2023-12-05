@@ -57,30 +57,34 @@
             <h2 style="text-align: center;">Major Filter</h2>
                 <form id="filters" method="get" style="font-size: larger;">
                     <div style="margin-left: 10%;">
-                    <label for="search">Search:</label>
-                    <input style="width:85%; height:30px" class="input-field" type="text" name="search">
-                    <br>
-                    <p>Department:</p>
-                    <input type="checkbox" id="ben" name="Bioengineering">
-                    <label for="ben">Bioengineering</label>
-                    <br>
-                    <input type="checkbox" id="cen" name="Civil Engineering">
-                    <label for="cen">Civil Engineering</label>
-                    <br>
-                    <input type="checkbox" id="csen" name="Computer Science and Engineering">
-                    <label for="csen">Computer Science and Engineering</label>
-                    <br>
-                    <input type="checkbox" id="ecen" name="Electrical and Computer Engineering">
-                    <label for="ece">Electrical and Computer Engineering</label>
-                    <br>
-                    <input type="checkbox" id="gen" name="General Engineering">
-                    <label for="gen">General Engineering</label>
-                    <br>
-                    <input type="checkbox" id="mech" name="Mechanical Engineering">
-                    <label for="mech">Mechanical Engineering</label>
-                    <br><br>
-                    </div>
-                    <input class="submit-button" type="submit" value="Submit">
+                        <br>
+                        <p>Majors:</p>
+                        <input type="checkbox" id="BIOE" value = "BIOE" name="majors-filters">
+                        <label for="BIOE">Bioengineering</label>
+                        <br>
+                        <input type="checkbox" id="CESE" value = "CESE" name="majors-filters">
+                        <label for="CESE">Civil Engineering</label>
+                        <br>
+                        <input type="checkbox" id="CSEN" value = "CSEN" name="majors-filters">
+                        <label for="CSEN">Computer Science and Engineering</label>
+                        <br>
+                        <input type="checkbox" id="WDE" value = "WDE" name="majors-filters">
+                        <label for="WDE">Web Design and Engineering</label>
+                        <br>
+                        <input type="checkbox" id="ECEN" value = "ECEN" name="majors-filters">
+                        <label for="ECEN">Electrical and Computer Engineering</label>
+                        <br>
+                        <input type="checkbox" id="ELEN" value = "ELEN" name="majors-filters">
+                        <label for="ECEN">Electrical Engineering</label>
+                        <br>
+                        <input type="checkbox" id="GENE" value = "GENE" name="majors-filters">
+                        <label for="GENE">General Engineering</label>
+                        <br>
+                        <input type="checkbox" id="MECH" value = "MECH" name="majors-filters">
+                        <label for="MECH">Mechanical Engineering</label>
+                        <br><br>
+                      </div>
+                      <input class="submit-button" type="button" value="Submit" onclick="checkFilters()">
                 </form>
         </div>
         <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px;">

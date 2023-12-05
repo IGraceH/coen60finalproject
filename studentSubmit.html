@@ -10,6 +10,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="studentForm.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <header id="header-container">
@@ -38,19 +39,19 @@
               <label>
                 <h3>First Name</h3>
               </label>
-              <input id="fname" style="width:85%; height:20px" type="text" name="fname" required><br><br>
+              <input id="fname" style="width:85%; height:20px" type="text" name="fname"><br><br>
             </div>
             <div style="margin-left:10%;">
               <label>
                 <h3>Last Name</h3>
               </label>
-              <input id="lname" style="width:85%; height:20px" type="text" name="lname" required><br><br>
+              <input id="lname" style="width:85%; height:20px" type="text" name="lname"><br><br>
             </div>
             <div style="margin-left: 10%;">
               <label>
                 <h3>Your Major</h3>
               </label>
-              <select id="major" name="major-list" style="width: 87%; height:25px" required>
+              <select id="major" name="major-list" style="width: 87%; height:25px">
                 <option value="">Select a Major</option>
                 <option value="BIOE">Bioengineering</option>
                 <option value="CESE">Civil Engineering</option>
@@ -67,7 +68,7 @@
               <label>
                 <h3>Any topic your're interest in?</h3>
               </label>
-              <input id="username" style="width:85%; height:20px" type="text" name="username" required><br><br>
+              <input id="interests" style="width:85%; height:20px" type="text" name="interests"><br><br>
             </div>
             <div style="margin-left: 10%;">
               <h3>Want to remove your account?</h3>
@@ -96,30 +97,34 @@
         <h2 style="text-align: center;">Major Filter</h2>
         <form id="filters" method="get" style="font-size: larger;">
           <div style="margin-left: 10%;">
-            <label for="search">Search:</label>
-            <input style="width:85%; height:30px" class="input-field" type="text" name="search">
             <br>
-            <p>Department:</p>
-            <input type="checkbox" id="BIOE" name="Bioengineering">
+            <p>Majors:</p>
+            <input type="checkbox" id="BIOE" value = "BIOE" name="majors-filters">
             <label for="BIOE">Bioengineering</label>
             <br>
-            <input type="checkbox" id="CESE" name="Civil Engineering">
+            <input type="checkbox" id="CESE" value = "CESE" name="majors-filters">
             <label for="CESE">Civil Engineering</label>
             <br>
-            <input type="checkbox" id="CSEN" name="Computer Science and Engineering">
+            <input type="checkbox" id="CSEN" value = "CSEN" name="majors-filters">
             <label for="CSEN">Computer Science and Engineering</label>
             <br>
-            <input type="checkbox" id="CSEN" name="Electrical and Computer Engineering">
+            <input type="checkbox" id="WDE" value = "WDE" name="majors-filters">
+            <label for="WDE">Web Design and Engineering</label>
+            <br>
+            <input type="checkbox" id="ECEN" value = "ECEN" name="majors-filters">
             <label for="ECEN">Electrical and Computer Engineering</label>
             <br>
-            <input type="checkbox" id="GENE" name="General Engineering">
+            <input type="checkbox" id="ELEN" value = "ELEN" name="majors-filters">
+            <label for="ECEN">Electrical Engineering</label>
+            <br>
+            <input type="checkbox" id="GENE" value = "GENE" name="majors-filters">
             <label for="GENE">General Engineering</label>
             <br>
-            <input type="checkbox" id="MECH" name="Mechanical Engineering">
+            <input type="checkbox" id="MECH" value = "MECH" name="majors-filters">
             <label for="MECH">Mechanical Engineering</label>
             <br><br>
           </div>
-          <input class="submit-button" type="submit" value="Submit">
+          <input id = "filter-button" class="submit-button" type="button" value="Submit" onclick="checkFilters()">
         </form>
       </div>
       <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px;">
@@ -133,7 +138,8 @@
     updateTable(str);
     document.getElementById("info-form").addEventListener('submit', function(event) {
         event.preventDefault();
-          alert('Form submitted successfully!');
+
+        if (validateStudentForm() == 2) {
           const form = document.getElementById("info-form").elements;
           let info = [];
           for (let i = 0; i < 4; i++) {
@@ -153,6 +159,19 @@
               }
           }
           updateTable(str);
+          window.alert("Successfully registered/updated your info!");
+
+          
+        }
+    });
+
+    $(document).ready(function(){
+      $("#filter-button").click(function(){
+        $(".BIOE").hide();
+      });
+      // $("#show").click(function(){
+      //   $("p").show();
+      // });
     });
   </script>
   </body>

@@ -20,7 +20,7 @@
     $new_contents = "";
     foreach ($contents as $lines) {
         $oneList = explode(":;", trim($lines));
-        $major = $oneList[2];        
+        $major = $oneList[4];        
 
         // if the user's email is matches the ones in the student list OR when the current user file is empty OR no info is provided yet by the user logged in
         if ($oneList[0] != $currentUserEmail || $currentUserEmail == "" || sizeof($currentEntryList) == 1) { // if line is not the current user, add that into new_str and return_str
@@ -39,6 +39,7 @@
 
     if ($currentEntryList[4] == "0") {
         $new_contents .= $currentUser . ":;";
+        $major = $currentEntryList[2];
         for ($i = 0; $i < 4; $i++) {
             $new_contents .= $currentEntryList[$i];
             if ($i != 3) {

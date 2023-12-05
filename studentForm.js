@@ -18,6 +18,21 @@ function validateLogin() {
     return true;
 }
 
+function validateStudentForm() {
+    if (document.getElementById("delete-check").checked) {
+        var str = "info=A:;B:;C:;D:;1";
+        updateTable(str);
+        window.alert("You were successfully removed from the list! Hope you visit us again :)");
+        return 0;
+    } else {
+        if (document.getElementById("fname").value == "" || document.getElementById("lname").value == "" || document.getElementById("major").value == "" || document.getElementById("interests").value == "") {
+            window.alert("Please finish filling in all of the information.");
+            return 1;
+        }
+    }
+    return 2;
+}
+
 function updateTable(str) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
@@ -46,4 +61,25 @@ function setUser(str) {
     };
     xmlhttp.open("GET", "get_user.php?" + str, true);
     xmlhttp.send();
+}
+
+function checkFilters() {
+    var markedCheckbox = document.getElementsByName("major-filters");
+    for (var checkbox of markedCheckbox) {
+        document.getElementById("usersMajor").innerHTML = markedCheckBox;
+        if (checkbox.checked) {
+            document.getElementsByClassName(checkbox.value).style.visibility = "visible";
+        } else {
+            document.getElementsByClassName(checkbox.value).style.visibility = "hidden";
+        }
+        // for (tableElems of elem) {
+        //     if (checkbox.checked) {
+        //         elem.style.display = "block";
+        //     } else {
+        //         elem.style.display = "none";
+        //     }
+        // }
+    }
+
+   
 }

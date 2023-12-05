@@ -130,23 +130,12 @@ hr {
   color: white;
   border: none;
   opacity: .4;
+  cursor: pointer;
 }
 
 .submit-button:active {
   box-shadow: 0 3px black;
   transform: translateX(-50%) translateY(2px);
-}
-
-.input-field {
-  border-radius: 5px;
-  border: 1px solid black;
-  width: 100%
-}
-
-.input-field:hover {
-  background-color: black;
-  opacity: .4;
-  color: white;
 }
 
 #check:hover {

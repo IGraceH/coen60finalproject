@@ -138,6 +138,34 @@ hr {
   transform: translateX(-50%) translateY(2px);
 }
 
+.major-filter-button {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  height: 30px;
+  width: 300px;
+  font-size: medium;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid whitesmoke;
+  opacity: .4;
+  box-shadow: 0 3px #999;
+}
+
+.major-filter-button:hover {
+  font-size: medium;
+  color: white;
+  border: none;
+  opacity: .4;
+}
+
+.major-filter-button:active {
+  box-shadow: 0 3px black;
+  transform: translateX(-50%) translateY(2px);
+}
+
+
 #check:hover {
   opacity: .4;
 }

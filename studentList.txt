@@ -6,12 +6,11 @@ dk@scu.edu:;abcdefgh4:;David:;Krakauer:;CSEN:;Emotional Regulation with AI
 jr@scu.edu:;abcdefgh5:;Jeremy:;Reyes:;CSEN:;Therapy Bot
 vp@scu.edu:;abcdefgh6:;Vivek:;Ponnala:;WDE:;Blockchains
 af@scu.edu:;abcdefgh7:;Alex:;Fang:;WDE:;Tracking App
-rm@scu.edu:;abcdefgh8:;Ryan:;Marquis:;ESEN:;Hot Car Alert System
-kw@scu.edu:;abcdefgh9:;Kurt:;Williams:;ESEN:;Micro-grids
+rm@scu.edu:;abcdefgh8:;Ryan:;Marquis:;ECEN:;Hot Car Alert System
+kw@scu.edu:;abcdefgh9:;Kurt:;Williams:;ECEN:;Micro-grids
 ka@scu.edu:;abcdefgh01:;Kwadwo:;Amaoko:;ELEN:;Health Management
 ic@scu.edu:;abcdefgh12:;Ivy:;Chung:;ELEN:;Crop Disease detection
 nv@scu.edu:;abcdefgh13:;Noah:;Villar:;GENE:;Arm Attachment
 al@scu.edu:;abcdefgh14:;Andrew:;Lemus:;GENE:;Intelligent Filters
 jg@scu.edu:;abcdefgh15:;Joe:;Galang:;MECH:;Agricultural Robots
 rw@scu.edu:;abcdefgh16:;Reid:;Whitney:;MECH:;Crash Vehicles
-

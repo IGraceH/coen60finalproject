@@ -37,7 +37,17 @@ function updateTable(str) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("student-table").innerHTML = this.responseText;
+            var str = this.responseText;
+            var split2 = str.split("interest=");
+            var interestTxt = split2[1];
+            var split3 = split2[0].split("major=");
+            var majorTxt = split3[1];
+            var tableTxt = split3[0];
+            document.getElementById("student-table").innerHTML = tableTxt;
+            if (document.getElementById("usersMajor") != null && document.getElementById("usersInterest") != null) {
+                document.getElementById("usersMajor").innerHTML = "Your Major: " + majorTxt;
+                document.getElementById("usersInterest").innerHTML = "Your Interests: " + interestTxt;
+            }
         }
     };
     xmlhttp.open("GET", "get_info.php?" + str, true);
@@ -61,25 +71,4 @@ function setUser(str) {
     };
     xmlhttp.open("GET", "get_user.php?" + str, true);
     xmlhttp.send();
-}
-
-function checkFilters() {
-    var markedCheckbox = document.getElementsByName("major-filters");
-    for (var checkbox of markedCheckbox) {
-        document.getElementById("usersMajor").innerHTML = markedCheckBox;
-        if (checkbox.checked) {
-            document.getElementsByClassName(checkbox.value).style.visibility = "visible";
-        } else {
-            document.getElementsByClassName(checkbox.value).style.visibility = "hidden";
-        }
-        // for (tableElems of elem) {
-        //     if (checkbox.checked) {
-        //         elem.style.display = "block";
-        //     } else {
-        //         elem.style.display = "none";
-        //     }
-        // }
-    }
-
-   
 }

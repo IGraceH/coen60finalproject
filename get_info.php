@@ -59,5 +59,14 @@
     fwrite($student_list_write, $new_contents . "\n"); 
     fclose($student_list_write);
 
+    if (sizeof($currentEntryList) == 1 || $currentEntryList[4] == "1") {
+        $return_str .= "major=";
+        $return_str .= "interest=";
+    } 
+    else {
+        $return_str .= "major=" . $currentEntryList[2];
+        $return_str .= "interest=" . $currentEntryList[3];
+    }
+
     echo $return_str;
 ?>

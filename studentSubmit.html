@@ -1,21 +1,17 @@
 <!-- README:
    Things to check for before running login/studentSubmit webpages:
-   - have read/write access for the files: studentList.txt turned ON
-   - allow local cookies -->
+   - have read/write access for the files: studentList.txt, and current-user.txt turned ON
+  -->
 
 
-   <!DOCTYPE html>
-   <html lang="en">
-   
-   
-   <head>
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="studentForm.js"></script>
-   </head>
-   
-   
-   <body>
+  </head>
+  <body>
     <header id="header-container">
       <img src="embed/sculogo.jpg" width="100" height="100" alt="logo">
       <div>
@@ -23,8 +19,8 @@
         <h2 style="font-weight:100;">SCHOOL OF ENGINEERING</h2>
       </div>
     </header>
-   
-   
+  
+  
     <div id="nav">
       <a href="homepage.html">Home</a>
       <a href="advisors.html">Advisor</a>
@@ -66,7 +62,7 @@
                 <option value="WDE">Web Design and Engineering</option>
               </select><br><br>
             </div>
-          </div>
+        </div>
             <div style="margin-left:10%;">
               <label>
                 <h3>Any topic your're interest in?</h3>
@@ -81,18 +77,16 @@
             </div>
             <br>
             <input class="submit-button" type="submit" value="Register/Update your info">
-        </form>
+          </form>
       </div>
-   
-   
-      <div style="width:55%; height:600px; border:1px solid black; border-radius: 50px;">
-        <h1 style="text-align: center;">Your're Logged in!</h1><br>
-        <div style="margin-left: 6%;">
-          <h3 id="usersMajor" style="font-size: larger;">Your Major: Megu, please update their major here </h3><br>
-          <h3 id="usersInterest" style="font-size: larger;">Your Interest: Megu, please update their interest here</h3><br> 
-          <h3 id="deleteInfo" style="font-size: larger;">About Deleting your Account: If you already found or form a group, you can use the delete button to remove your account so your information will no longer be shown to the public.</h3>
-        </div>
+    <div style="width:55%; height:600px; border:1px solid black; border-radius: 50px;">
+      <h1 style="text-align: center;">Your're Logged in!</h1><br>
+      <div style="margin-left: 6%;">
+        <h3 id="usersMajor" style="font-size: larger;">Your Major: Megu, please update their major here </h3><br>
+        <h3 id="usersInterest" style="font-size: larger;">Your Interest: Megu, please update their interest here</h3><br> 
+        <h3 id="deleteInfo" style="font-size: larger;">About Deleting your Account: If you already found or form a group, you can use the delete button to remove your account so your information will no longer be shown to the public.</h3>
       </div>
+    </div>
     </div>
     <br>
     <hr>
@@ -133,39 +127,34 @@
       </div>
     </div>
     <br><br>
-    <!-- <div id="spreadsheet">
-      <table id="student-table"></table>
-    </div> -->
-    <script>
-      const form = document.getElementById("info-form").elements;
-      var str = "info=";
-      updateTable(str);
-      document.getElementById("info-form").addEventListener('submit', function(event) {
-          event.preventDefault();
-         
-            alert('Form submitted successfully!');
-            const form = document.getElementById("info-form").elements;
-            let info = [];
-            for (let i = 0; i < 4; i++) {
-                info.push(form[i].value);
-            }
-            var deleteCheck = document.getElementById("delete-check");
-            if (deleteCheck.checked == true) {
-              info.push("1");
-            } else {
-              info.push("0");
-            }
-            var str = "info=";
-            for (let i = 0; i < 5; i++) {
-                str += info[i];
-                if (i != 4) {
-                    str += ":;";
-                }
-            }
-            updateTable(str);
-         
-      });
-   </script>
-   </body>
-   </html>
+  <script>
+    const form = document.getElementById("info-form").elements;
+    var str = "info=";
+    updateTable(str);
+    document.getElementById("info-form").addEventListener('submit', function(event) {
+        event.preventDefault();
+          alert('Form submitted successfully!');
+          const form = document.getElementById("info-form").elements;
+          let info = [];
+          for (let i = 0; i < 4; i++) {
+              info.push(form[i].value);
+          }
+          var deleteCheck = document.getElementById("delete-check");
+          if (deleteCheck.checked == true) {
+            info.push("1");
+          } else {
+            info.push("0");
+          }
+          var str = "info=";
+          for (let i = 0; i < 5; i++) {
+              str += info[i];
+              if (i != 4) {
+                  str += ":;";
+              }
+          }
+          updateTable(str);
+    });
+  </script>
+  </body>
+  </html>
    

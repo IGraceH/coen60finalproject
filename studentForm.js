@@ -35,6 +35,7 @@ function setUser(str) {
         if (this.readyState == 4 && this.status == 200) {
             let response = this.responseText;
             if (response == "1") {
+                updateTable("info=");
                 window.location.href = "studentSubmit.html";
             } else {
                 window.alert("Wrong password! Please retry again.");

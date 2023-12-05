@@ -21,7 +21,6 @@
       </div>
     </header>
   
-  
     <div id="nav">
       <a href="homepage.html">Home</a>
       <a href="advisors.html">Advisor</a>
@@ -99,32 +98,32 @@
           <div style="margin-left: 10%;">
             <br>
             <p>Majors:</p>
-            <input type="checkbox" id="BIOE" value = "BIOE" name="majors-filters">
-            <label for="BIOE">Bioengineering</label>
-            <br>
-            <input type="checkbox" id="CESE" value = "CESE" name="majors-filters">
-            <label for="CESE">Civil Engineering</label>
-            <br>
-            <input type="checkbox" id="CSEN" value = "CSEN" name="majors-filters">
-            <label for="CSEN">Computer Science and Engineering</label>
-            <br>
-            <input type="checkbox" id="WDE" value = "WDE" name="majors-filters">
-            <label for="WDE">Web Design and Engineering</label>
-            <br>
-            <input type="checkbox" id="ECEN" value = "ECEN" name="majors-filters">
-            <label for="ECEN">Electrical and Computer Engineering</label>
-            <br>
-            <input type="checkbox" id="ELEN" value = "ELEN" name="majors-filters">
-            <label for="ECEN">Electrical Engineering</label>
-            <br>
-            <input type="checkbox" id="GENE" value = "GENE" name="majors-filters">
-            <label for="GENE">General Engineering</label>
-            <br>
-            <input type="checkbox" id="MECH" value = "MECH" name="majors-filters">
-            <label for="MECH">Mechanical Engineering</label>
+            <input type="checkbox" id="BIOE_filter" value = "BIOE" name="majors-filters">
+              <label for="BIOE">Bioengineering</label>
+              <br>
+              <input type="checkbox" id="CESE_filter" value = "CESE" name="majors-filters">
+              <label for="CESE">Civil Engineering</label>
+              <br>
+              <input type="checkbox" id="CSEN_filter" value = "CSEN" name="majors-filters">
+              <label for="CSEN">Computer Science and Engineering</label>
+              <br>
+              <input type="checkbox" id="WDE_filter" value = "WDE" name="majors-filters">
+              <label for="WDE">Web Design and Engineering</label>
+              <br>
+              <input type="checkbox" id="ECEN_filter" value = "ECEN" name="majors-filters">
+              <label for="ECEN">Electrical and Computer Engineering</label>
+              <br>
+              <input type="checkbox" id="ELEN_filter" value = "ELEN" name="majors-filters">
+              <label for="ELEN">Electrical Engineering</label>
+              <br>
+              <input type="checkbox" id="GENE_filter" value = "GENE" name="majors-filters">
+              <label for="GENE">General Engineering</label>
+              <br>
+              <input type="checkbox" id="MECH_filter" value = "MECH" name="majors-filters">
+              <label for="MECH">Mechanical Engineering</label>
             <br><br>
           </div>
-          <input id = "filter-button" class="submit-button" type="button" value="Submit" onclick="checkFilters()">
+          <input id = "filter-button" class="major-filter-button" type="button" value="Submit">
         </form>
       </div>
       <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px;">
@@ -166,13 +165,33 @@
     });
 
     $(document).ready(function(){
-      $("#filter-button").click(function(){
-        $(".BIOE").hide();
-      });
-      // $("#show").click(function(){
-      //   $("p").show();
-      // });
-    });
+            $("#filter-button").click(function(){
+                var checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
+                var allMajors = ["BIOE", "CESE", "CSEN", "WDE", "ECEN", "ELEN", "GENE", "MECH"];
+                if (checkedBoxes.length == 0 || checkedBoxes.length == 8) {
+                    $(".BIOE").show();
+                    $(".CESE").show();
+                    $(".CSEN").show();
+                    $(".WDE").show();
+                    $(".ECEN").show();
+                    $(".ELEN").show();
+                    $(".GENE").show();
+                    $(".MECH").show();
+                } else {
+                    var checked = [];
+                    for (let i = 0; i < checkedBoxes.length; i++) {
+                        var val = checkedBoxes[i].value;
+                        checked.push(val);
+                        $("." + val).show();
+                    }
+                    for (let i = 0; i < allMajors.length; i++) {
+                        if (checked.indexOf(allMajors[i]) == -1) {
+                            $("." + allMajors[i]).hide();
+                        }
+                    }
+                }
+            });
+        });
   </script>
   </body>
   </html>

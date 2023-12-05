@@ -62,24 +62,3 @@ function setUser(str) {
     xmlhttp.open("GET", "get_user.php?" + str, true);
     xmlhttp.send();
 }
-
-function checkFilters() {
-    var markedCheckbox = document.getElementsByName("major-filters");
-    for (var checkbox of markedCheckbox) {
-        document.getElementById("usersMajor").innerHTML = markedCheckBox;
-        if (checkbox.checked) {
-            document.getElementsByClassName(checkbox.value).style.visibility = "visible";
-        } else {
-            document.getElementsByClassName(checkbox.value).style.visibility = "hidden";
-        }
-        // for (tableElems of elem) {
-        //     if (checkbox.checked) {
-        //         elem.style.display = "block";
-        //     } else {
-        //         elem.style.display = "none";
-        //     }
-        // }
-    }
-
-   
-}

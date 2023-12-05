@@ -1,20 +1,20 @@
-Bill Lu | blu2@scu.edu | 408-551-3510 | Associate Professor | Bioengineering | SCDI 3311B
-Maryam Mobed-Miremadi | mmobedmiremadi@scu.edu | 408-554-2731  | Senior Lecturer | Bioengineering | SCDI 2103
-Aria Amirbahman | aamirbahman@scu.edu | 408-551-3515 | Chair and Professor | Civil Engineering | SCDI 2208B
-Reynaud Serrette | rserrette@scu.edu | 408-554-6868 | Professor | Civil Engineering | SCDI 2208J
-Behnam Dezfouli | bdezfouli@scu.edu | 408-551-1634 | Associate Professor | Computer Science and Engineering, Robotics | Bergin 115
-Silvia Figueira | sfigueira@scu.edu | 408-554-4105 | Chair and Professor | Computer Science and Engineering | Bergin 103
-Christopher Kitts | ckitts@scu.edu | 408-554-4382 | Professor, William and Janice Terry Professor, Director of Robotics Systems Laboratory | Mechanical Engineering, Aerospace Engineering, Robotics | SCDI 3311G
-Kurt Schab | kschab@scu.edu | 408-551-3342 | Assistant Professor | Electrical and Computer Engineering | SCDI 4025L
-Tokunbo Ogunfunmi | togunfunmi@scu.edu | 408-554-4481 | Professor | Electrical and Computer Engineering, Robotics | SCDI 4025J
-Hohyun Lee | hlee@scu.edu | 408-554-5283 | Chair and Professor | Mechanical Engineering | SCDI 3311L
-Ashley Kim | ukim@scu.edu | 408-554-2760 | Associate Professor | Bioengineering | SCDI 3311F
-Sharon Hsiao | ihsiao@scu.edu | 408-551-3565 | Assistant Professor | Computer Science and Engineering | Heafey 210
-Angela Musurlian | amusurlian@scu.edu | 408-551-3336 | Lecturer | Computer Science and Engineering | Heafey 209
-Jessica Kuczenski | jkuczenski@scu.edu | 408-551-3337 | Chair | General Engineering | SCDI 2208D
-Robert Marks | rmarks@scu.edu | 408-551-3024 | Lecturer | Mechanical Engineering | SCDI 3311P
-Hoeseok Yang | hyang8@scu.edu | 408-551-3308 | Associate Professor | Electrical and Computer Engineering | SCDI 4025P
-Kai Lukoff | klukoff@scu.edu | 408-551-3923 | Assistant Professor | Computer Science and Engineering | Heafey 229
-Yi Fang | yfang@scu.edu | 408-554-6961 | Associate Professor | Computer Science and Engineering, Robotics | Bergin 104
-David Anastasiu | danastasiu@scu.edu | 408-551-1941 | Assistant Professor | Computer Science and Engineering | Bergin 100
-Sean Choi | schoi3@scu.edu | 408-551-3564 | Assistant Professor | Computer Science and Engineering | Heafey 207
+Bill | Lu | blu2@scu.edu | 408-551-3510 | Associate Professor | Bioengineering | SCDI 3311B | 3552
+Maryam | Mobed-Miremadi | mmobedmiremadi@scu.edu | 408-554-2731  | Senior Lecturer | Bioengineering | SCDI 2103 | 3083
+Aria | Amirbahman | aamirbahman@scu.edu | 408-551-3515 | Chair and Professor | Civil Engineering | SCDI 2208B | 8398
+Reynaud | Serrette | rserrette@scu.edu | 408-554-6868 | Professor | Civil Engineering | SCDI 2208J | 372
+Behnam | Dezfouli | bdezfouli@scu.edu | 408-551-1634 | Associate Professor | Computer Science and Engineering, Robotics | Bergin 115 | 3930
+Silvia | Figueira | sfigueira@scu.edu | 408-554-4105 | Chair and Professor | Computer Science and Engineering | Bergin 103 | 1281
+Christopher | Kitts | ckitts@scu.edu | 408-554-4382 | Professor, William and Janice Terry Professor, Director of Robotics Systems Laboratory | Mechanical Engineering, Aerospace Engineering, Robotics | SCDI 3311G | 544
+Kurt | Schab | kschab@scu.edu | 408-551-3342 | Assistant Professor | Electrical and Computer Engineering | SCDI 4025L | 4466
+Tokunbo | Ogunfunmi | togunfunmi@scu.edu | 408-554-4481 | Professor | Electrical and Computer Engineering, Robotics | SCDI 4025J | 112
+Hohyun | Lee | hlee@scu.edu | 408-554-5283 | Chair and Professor | Mechanical Engineering | SCDI 3311L | 2101
+Ashley | Kim | ukim@scu.edu | 408-554-2760 | Associate Professor | Bioengineering | SCDI 3311F | 2103
+Sharon | Hsiao | ihsiao@scu.edu | 408-551-3565 | Assistant Professor | Computer Science and Engineering | Heafey 210 | 11167
+Angela | Musurlian | amusurlian@scu.edu | 408-551-3336 | Lecturer | Computer Science and Engineering | Heafey 209 | 3556
+Jessica | Kuczenski | jkuczenski@scu.edu | 408-551-3337 | Chair | General Engineering | SCDI 2208D | 3334
+Robert | Marks | rmarks@scu.edu | 408-551-3024 | Lecturer | Mechanical Engineering | SCDI 3311P | 2353
+Hoeseok | Yang | hyang8@scu.edu | 408-551-3308 | Associate Professor | Electrical and Computer Engineering | SCDI 4025P | 11476
+Kai | Lukoff | klukoff@scu.edu | 408-551-3923 | Assistant Professor | Computer Science and Engineering | Heafey 229 | 11794
+Yi | Fang | yfang@scu.edu | 408-554-6961 | Associate Professor | Computer Science and Engineering, Robotics | Bergin 104 | 2790
+David | Anastasiu | danastasiu@scu.edu | 408-551-1941 | Assistant Professor | Computer Science and Engineering | Bergin 100 | 6596
+Sean | Choi | schoi3@scu.edu | 408-551-3564 | Assistant Professor | Computer Science and Engineering | Heafey 207 | 11171

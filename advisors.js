@@ -22,12 +22,14 @@ function processContent(content) {
 		for (let item of content) {
 			item = item.split(" | ");
 			advisors.push({
-				name: item[0],
-				email: item[1],
-				phone: item[2],
-				title: item[3],
-				department: item[4],
-				office: item[5]
+				fname: item[0],
+				lname: item[1],
+				email: item[2],
+				phone: item[3],
+				title: item[4],
+				department: item[5],
+				office: item[6],
+				phonebook: item[7]
 			});
 		}
 	}
@@ -44,7 +46,9 @@ function printAdvisors(advisors) {
 	content += "<table id='advisor-table'><tbody>";
 	for (let advisor of advisors) {
 		content += `<tr><td>
-				<h2>${advisor.name}</h2>${advisor.email}
+				<h2><a href="https://www.scu.edu/phonebook/${advisor.phonebook}/${advisor.lname}" target="_blank">
+					${advisor.fname} ${advisor.lname}
+				</a></h2>${advisor.email}
 				<div class='table-info-line'></div>
 				<table class="advisor-info">
 					<tr>

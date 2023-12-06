@@ -6,19 +6,25 @@
   <style>
     body {
       font-family: serif;
+      white-space: nowrap;
     }
 
     .image-container {
-      max-width: 100px; /* Set a maximum width if needed */
+      display: flex;
+      align-items: center;
+      max-width: 600px;
       margin-bottom: 10px;
+      border: 1px solid #ccc; /* Add a border around each container */
+      padding: 10px; /* Add padding for space between content and border */
     }
 
     .image-container img {
-      width: 100%; /* Make the image responsive */
+      max-width: 100%;
     }
 
     .image-container p {
       margin: 0;
+      margin-left: 10px;
     }
   </style>
 </head>
@@ -37,26 +43,28 @@
     <a href="homepage.html">Home</a>
     <a class="active" href="advisors.html">Advisor</a>
     <a class="active" href="Login.html">Team Building</a>
-  </div>
+  </div> <br>
+
+  <h2>All About us</h2>
 
   <div class="image-container">
     <img src="embed/megu.jpg" alt="Megu">
-    <p>Add Text here</p>
+    <p>Megu- I am majoring in web design and engineering.</p>
   </div>
 
   <div class="image-container">
     <img src="embed/Isabelle.jpg" alt="Isabelle">
-    <p>Add Text here</p>
+    <p>Isabelle- I am majoring in web design and engineering.</p>
   </div>
 
   <div class="image-container">
     <img src="embed/zach.jpg" alt="Zach">
-    <p>Add Text here</p>
+    <p>Zach- I am majoring in web design and engineering.</p>
   </div>
 
   <div class="image-container">
     <img src="embed/anisha.jpg" alt="Anisha">
-    <p>Add Text here</p>
+    <p>Anisha- I am majoring in web design and engineering.</p>
   </div>
 </body>
 </html>

@@ -1,32 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>All About Us</title>
+  <title>About Us</title>
   <link rel="stylesheet" type="text/css" href="style.css"/>
-  <style>
-    body {
-      font-family: serif;
-      white-space: nowrap;
-    }
-
-    .image-container {
-      display: flex;
-      align-items: center;
-      max-width: 600px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc; /* Add a border around each container */
-      padding: 10px; /* Add padding for space between content and border */
-    }
-
-    .image-container img {
-      max-width: 100%;
-    }
-
-    .image-container p {
-      margin: 0;
-      margin-left: 10px;
-    }
-  </style>
 </head>
 <body>
   <header id="header-container">
@@ -40,31 +16,49 @@
   </header>
 
   <div id="nav">
-    <a href="homepage.html">Home</a>
-    <a class="active" href="advisors.html">Advisor</a>
-    <a class="active" href="Login.html">Team Building</a>
-  </div> <br>
-
-  <h2>All About us</h2>
-
-  <div class="image-container">
-    <img src="embed/megu.jpg" alt="Megu">
-    <p>Megu- I am majoring in web design and engineering.</p>
+      <a href="homepage.html">Home</a>
+      <a href="advisors.html">Find Advisors</a>
+      <a href="login.html">Team Building</a>
+      <a class="active" href="aboutus.html" style="float:right;">About Us </a>
   </div>
 
-  <div class="image-container">
-    <img src="embed/Isabelle.jpg" alt="Isabelle">
-    <p>Isabelle- I am majoring in web design and engineering.</p>
+  <div class="main-container">
+    <br>
+    <h1 style="text-align: center;">About Us</h1>
+    <hr>
+    <br>
+
+    <p>
+      This website was created by Megu Kanzawa, Isabelle Hu, Zach Wang, and Anisha Malani for the COEN 60 Final Project.
+      <br>
+      Please contact Isabelle at <a href="/">ihu@scu.edu</a> if you have any questions.
+    </p>
+
+    <div class="image-container">
+      <img src="embed/megu.jpg" alt="Megu">
+      <p>Megu- I am majoring in web design and engineering.</p>
+    </div>
+
+    <div class="image-container">
+      <img src="embed/Isabelle.jpg" alt="Isabelle">
+      <p>Isabelle- I am majoring in web design and engineering.</p>
+    </div>
+
+    <div class="image-container">
+      <img src="embed/zach.jpg" alt="Zach">
+      <p>Zach- I am majoring in web design and engineering.</p>
+    </div>
+
+    <div class="image-container">
+      <img src="embed/anisha.jpg" alt="Anisha">
+      <p>Anisha- I am majoring in web design and engineering.</p>
+    </div>
   </div>
 
-  <div class="image-container">
-    <img src="embed/zach.jpg" alt="Zach">
-    <p>Zach- I am majoring in web design and engineering.</p>
-  </div>
 
-  <div class="image-container">
-    <img src="embed/anisha.jpg" alt="Anisha">
-    <p>Anisha- I am majoring in web design and engineering.</p>
-  </div>
+  <footer id="footer-container">
+      <div id="footer-bar"></div>
+      <p> &copy; 2023 Santa Clara University School of Engineering </p>
+  </footer>
 </body>
 </html>

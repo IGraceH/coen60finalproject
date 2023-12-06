@@ -44,9 +44,9 @@ function updateTable(str) {
             var majorTxt = split3[1];
             var tableTxt = split3[0];
             document.getElementById("student-table").innerHTML = tableTxt;
-            if (document.getElementById("usersMajor") != null && document.getElementById("usersInterest") != null) {
-                document.getElementById("usersMajor").innerHTML = "Your Major: " + majorTxt;
-                document.getElementById("usersInterest").innerHTML = "Your Interests: " + interestTxt;
+            if ((majorTxt != null) && (interestTxt != null)) {
+                document.getElementById("usersMajor").innerHTML = "Your major: " + majorTxt;
+                document.getElementById("usersInterest").innerHTML = "Your interests: " + interestTxt;
             }
         }
     };

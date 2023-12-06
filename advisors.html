@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Senior Design Showcase</title>
+	<title>Find Advisors</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 	<script src="advisors.js"></script>
 </head>
@@ -18,52 +18,53 @@
 
     <div id="nav">
         <a href="homepage.html">Home</a>
-        <a class="active" href="advisors.html">Advisor</a>
-        <a class="active" href="Login.html">Team Building</a>
+        <a class="active" href="advisors.html">Find Advisors</a>
+        <a href="login.html">Team Building</a>
+        <a href="aboutus.html" style="float:right;">About Us </a>
     </div>
 
+	<br>
+    <h1 style="text-align: center;">Find Advisors</h1>
+    <hr>
+    <br>
 	<div class="advisor-main">
-		<div>
-		    <h1>Find Advisors</h1>
+		<div id="advisor-filter">
+		
+			<h2>Filter</h2>
 
-			<div id="advisor-filter">
-			
-				<h2>Filter</h2>
+		<!-- Search & Filter Form 
+			 feel free to style and add inputs
+			 do not change existing inputs
+			 added inputs must match format with existing inputs
+		-->
 
-			<!-- Search & Filter Form 
-				 feel free to style and add inputs
-				 do not change existing inputs
-				 added inputs must match format with existing inputs
-			-->
+		
 
-			
-
-				<form id="filters" method="get" action="">
-					<label for="search">Search:</label>
-					<input id="search" style="width:95%; height:20px" type="text" name="search">
-					<br><br>
-					<p>Department:</p>
-					<input type="checkbox" id="ben" name="Bioengineering">
-					<label for="ben">Bioengineering</label>
-					<br>
-					<input type="checkbox" id="cen" name="Civil Engineering">
-					<label for="cen">Civil Engineering</label>
-					<br>
-					<input type="checkbox" id="csen" name="Computer Science and Engineering">
-					<label for="csen">Computer Science and Engineering</label>
-					<br>
-					<input type="checkbox" id="ecen" name="Electrical and Computer Engineering">
-					<label for="ece">Electrical and Computer Engineering</label>
-					<br>
-					<input type="checkbox" id="gen" name="General Engineering">
-					<label for="gen">General Engineering</label>
-					<br>
-					<input type="checkbox" id="mech" name="Mechanical Engineering">
-					<label for="mech">Mechanical Engineering</label>
-					<br><br>
-					<input class="submit-button" type="submit" value="Submit">
-				</form>
-			</div>
+			<form id="filters" method="get" action="">
+				<label for="search">Search:</label>
+				<input id="search" style="width:95%; height:20px" type="text" name="search">
+				<br><br>
+				<p>Department:</p>
+				<input type="checkbox" id="ben" name="Bioengineering">
+				<label for="ben">Bioengineering</label>
+				<br>
+				<input type="checkbox" id="cen" name="Civil Engineering">
+				<label for="cen">Civil Engineering</label>
+				<br>
+				<input type="checkbox" id="csen" name="Computer Science and Engineering">
+				<label for="csen">Computer Science and Engineering</label>
+				<br>
+				<input type="checkbox" id="ecen" name="Electrical and Computer Engineering">
+				<label for="ece">Electrical and Computer Engineering</label>
+				<br>
+				<input type="checkbox" id="gen" name="General Engineering">
+				<label for="gen">General Engineering</label>
+				<br>
+				<input type="checkbox" id="mech" name="Mechanical Engineering">
+				<label for="mech">Mechanical Engineering</label>
+				<br><br>
+				<input class="submit-button" type="submit" value="Submit">
+			</form>
 		</div>
 
 		<div>

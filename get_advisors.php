@@ -1,5 +1,5 @@
 <?php
-$contents = explode("\n", file_get_contents("advisors.txt"));
+$contents = explode("\n", file_get_contents("data/advisors.txt"));
 
 $search_results = array();
 $filter_results = array();

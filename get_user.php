@@ -1,6 +1,6 @@
 <?php
-    $currentUserFile = fopen("current-user.txt", "w") or die("Unable to open file!");
-    $masterList = "studentList.txt";
+    $currentUserFile = fopen("data/current-user.txt", "w") or die("Unable to open file!");
+    $masterList = "data/student-list.txt";
     $currentUser = trim($_GET["user"]); // current entry in string format
     $currentUserList = explode(":;", trim($_GET["user"])); // current entry in list format
 

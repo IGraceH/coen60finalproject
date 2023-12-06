@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Senior Design Showcase</title>
+    <title>Senior Design Advisor and Team Building Support</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
@@ -17,14 +17,34 @@
 
     <div id="nav">
         <a class="active" href="homepage.html">Home</a>
-        <a href="advisors.html">Advisor</a>
-        <a class="active" href="Login.html">Team Building</a>
-        <a class="active" href="aboutus.html">All About Us </a>
+        <a href="advisors.html">Find Advisors</a>
+        <a href="login.html">Team Building</a>
+        <a href="aboutus.html" style="float:right;">About Us </a>
     </div>
 
-    <div id="main-container">
-        <h1 style="text-align: center;">About Senior Design</h1>
-        <h1>About</h1>
+    <div id="homepage" class="main-container">
+        <br>
+        <h1 style="text-align: center;">Senior Design Advisor and Team Building Support</h1>
+        <hr>
+        <div style="display: flex; justify-content: center; width: 100%; text-align: center;">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <div style="max-width: 750px;">
+                    <p>
+                        This site is made for engineering seniors of Santa Clara University currently pursuing in the endeavor of the Senior Design project. We aim to aid in the process of finding an advisor suitable for the student's project and forming a team of students with similar interests to work on the project.
+                        <br><br>
+                        What would you like to do?
+                    </p>
+                </div>
+                <div id="homepage-select">
+                        <a href="advisors.html"><div class="homepage-select-option">Find Advisors</div></a>
+                        <a href="login.html"><div class="homepage-select-option">Team Building</div></a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <h1 style="text-align: center;">About the Senior Design Project</h1>
+        <hr>
         <div class="section-main">
             <div class="section-left">
                 <div class="section-info" style="display: flex; justify-content: center; overflow: hidden;">
@@ -37,9 +57,10 @@
             </div>
 
             <div class="section-right">
-                <div id="about-sd" class="section-info" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
-                    <h3>What is Senior Design</h3>
-                    <p>A requirement for graduation, student teams take on year-long capstone projects, putting their problem-solving skills to the test and collaborating to take an idea from concept to design to prototype. On the second Thursday in May, teams present their work to an audience of industry experts, faculty advisors, students, family, and friends of the School of Engineering at the annual Senior Design Conference highlight of our academic year. All are welcome to watch the student presentations!</p>
+                <div id="about-sd" class="section-info" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                    <p>
+                        The Senior Design requirement for graduation for engineering studnets. Student teams take on year-long capstone projects, putting their problem-solving skills to the test and collaborating to take an idea from concept to design to prototype. On the second Thursday in May, the teams present their work to an audience of industry experts, faculty advisors, students, family, and friends of the School of Engineering at the annual Senior Design Conference highlight of our academic year. All are welcome to watch the student presentations!
+                    </p>
                 </div>                
                 <div class="section-info" style="display: flex; justify-content: center; overflow: hidden;">
                     <iframe src="https://www.youtube.com/embed/1DBi0eK2g7I?si=-84v5mRXWAEg8EFt" style="border-radius: 13px; width: 100%; height: 100%; object-fit: contain; object-position: center;"></iframe>
@@ -47,44 +68,21 @@
             </div>
         </div>
 
-        <hr>
+        <br><br>
 
         <div>
-            <h1>More Information</h1>
+            <h1 style="text-align: center;">More Information</h1>
+            <hr>
+            <br>
             <div style="display: flex; justify-content: center;">
                 <iframe src="embed/2022SDFinal.pdf" id="sd-pdf"></iframe>
             </div>
         </div>
-
-        <hr>
-
-        <h1>Project Information</h1>
-        <div class="section-main">
-            <div class="section-left">
-                <div class="section-info">
-                    <h3 style="text-align: center;">Group Members</h3>
-                    <ul>
-                        <li>Megu Kanazawa</li>
-                        <li>Isabelle Hu</li>
-                        <li>Zachariah Wang</li>
-                        <li>Anisha Malani</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="section-right">
-                <div class="section-info">
-                    <h3 style="text-align: center;">Things Included</h3>
-                    <ul>
-                        <li>Infromation about Advisors</li>
-                        <li>Support individual student finding groups</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <footer id="footer-container">
+        <br><br>
+    </div>
+    <footer id="footer-container">
             <div id="footer-bar"></div>
             <p> &copy; 2023 Santa Clara University School of Engineering </p>
-        </footer>
-    </div>
+    </footer>
 </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-  font-family:serif;
+  font-family: serif;
 }
 
 img {
@@ -15,8 +15,35 @@ a {
 
 a:hover {
   color: #e01f22;
-  text-decoration: underline;
 }
+
+h1 {
+  text-align: center;
+}
+
+#homepage p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Add a border around each container */
+  padding: 10px; /* Add padding for space between content and border */
+}
+
+.image-container img {
+  max-width: 100%;
+}
+
+.image-container p {
+  margin: 0;
+  margin-left: 10px;
+}
+
 
 #header-container {
   display: flex;
@@ -25,7 +52,7 @@ a:hover {
 }
 
 
-#main-container {
+.main-container {
   margin: 0 12% 0 12%;
 }
 
@@ -49,8 +76,42 @@ a:hover {
 }
 
 #nav a.active {
+  background-color: #ddd;
+  color: black;
+}
+
+#homepage-select {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 120px;
+  padding: 20px;
   background-color: #7b1113;
-  color: white;
+  border-radius: 50px;
+}
+
+.homepage-select-option {
+  width: 200px;
+  height: 50px;
+  background-color: whitesmoke;
+  border: solid 1px white;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.homepage-select-option:hover {
+  background-color: white;
+  border: solid 5px white;
+}
+
+.homepage-select-option a:hover {
+  text-decoration: none;
 }
 
 .section-main {
@@ -58,7 +119,6 @@ a:hover {
   height: auto;
   border: none;
   display: flex;
-  justify-content: center;
   gap: 40px;
 }
 
@@ -227,7 +287,7 @@ hr {
 }
 
 #advisor-list {
-  height: 70vh;
+  height: 550px;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -247,12 +307,15 @@ hr {
   min-width: 400px;
   background-color: white;
   padding: 20px;
-
 }
 
 #advisor-table h2 {
   display: inline;
   margin-right: 20px;
+}
+
+#advisor-table a:hover {
+  text-decoration: underline;
 }
 
 .table-info-line {

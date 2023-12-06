@@ -1,8 +1,8 @@
 <?php
     // files
-    $student_list_read = "studentList.txt";
-    $currentUserFile = "current-user.txt";
-    // $debugF = fopen("debugFile.txt", "a+") or die ("Unable to open file!");
+    $student_list_read = "data/student-list.txt";
+    $currentUserFile = "data/current-user.txt";
+    // $debugF = fopen("data/debug-file.txt", "a+") or die ("Unable to open file!");
 
     // only includes: firstname:;lastname:;major:;interests:;delete(true/false)
     $currentEntry = trim($_GET["info"]); // current entry in string format
@@ -16,7 +16,7 @@
     $contents = explode("\n", trim(file_get_contents($student_list_read)));
     $return_str = "<table><tr><th class=student-table-header>First Name</th><th class=student-table-header>Last Name</th><th class=student-table-header>Major</th><th class=student-table-header>SCU Email</th><th class=student-table-header>Interest</th></tr>";
     
-    $student_list_write = fopen("studentList.txt", "w+") or die("Unable to open file!");
+    $student_list_write = fopen("data/student-list.txt", "w+") or die("Unable to open file!");
     $new_contents = "";
     foreach ($contents as $lines) {
         $oneList = explode(":;", trim($lines));

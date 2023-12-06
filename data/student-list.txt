@@ -15,3 +15,4 @@ al@scu.edu:;abcdefgh14:;Andrew:;Lemus:;GENE:;Intelligent Filters
 jg@scu.edu:;abcdefgh15:;Joe:;Galang:;MECH:;Agricultural Robots
 rw@scu.edu:;abcdefgh16:;Reid:;Whitney:;MECH:;Crash Vehicles
 ihu@scu.edu:;password1:;Isabelle:;Hu:;WDE:;Web Development
+

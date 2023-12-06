@@ -1,5 +1,5 @@
 body {
-  font-family:serif;
+  font-family: serif;
 }
 
 img {
@@ -17,6 +17,25 @@ a:hover {
   color: #e01f22;
   text-decoration: underline;
 }
+
+.image-container {
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Add a border around each container */
+  padding: 10px; /* Add padding for space between content and border */
+}
+
+.image-container img {
+  max-width: 100%;
+}
+
+.image-container p {
+  margin: 0;
+  margin-left: 10px;
+}
+
 
 #header-container {
   display: flex;

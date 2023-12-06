@@ -15,7 +15,6 @@ a {
 
 a:hover {
   color: #e01f22;
-  text-decoration: underline;
 }
 
 h1 {
@@ -77,8 +76,42 @@ p {
 }
 
 #nav a.active {
+  background-color: #ddd;
+  color: black;
+}
+
+#homepage-select {
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  height: 120px;
+  padding: 20px;
   background-color: #7b1113;
-  color: white;
+  border-radius: 50px;
+}
+
+.homepage-select-option {
+  width: 200px;
+  height: 50px;
+  background-color: whitesmoke;
+  border: solid 1px white;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.homepage-select-option:hover {
+  background-color: white;
+  border: solid 5px white;
+}
+
+.homepage-select-option a:hover {
+  text-decoration: none;
 }
 
 .section-main {
@@ -274,12 +307,15 @@ hr {
   min-width: 400px;
   background-color: white;
   padding: 20px;
-
 }
 
 #advisor-table h2 {
   display: inline;
   margin-right: 20px;
+}
+
+#advisor-table a:hover {
+  text-decoration: underline;
 }
 
 .table-info-line {

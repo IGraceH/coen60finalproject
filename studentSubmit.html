@@ -6,7 +6,7 @@
 <!DOCTYPE html>
   <html lang="en">
   <head>
-    <title>Document</title>
+    <title>Team Building</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <script type="text/javascript" src="studentForm.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -24,10 +24,10 @@
         <a href="homepage.html">Home</a>
         <a href="advisors.html">Advisors</a>
         <a class="active" href="login.html">Team Building</a>
-        <a href="aboutus.html" style="float:right;">All About Us </a>
+        <a href="aboutus.html" style="float:right;">About Us </a>
     </div>
 
-    
+
     <h1 style="text-align: center;">Welcome To Senior Design Team Formation Support</h1>
     <hr>
     <br>
@@ -67,7 +67,7 @@
         </div>
             <div style="margin-left:10%;">
               <label>
-                <h3>Any topic your're interest in?</h3>
+                <h3>Interested Topics</h3>
               </label>
               <input id="interests" style="width:85%; height:20px" type="text" name="interests"><br><br>
             </div>
@@ -97,7 +97,7 @@
     <br>
     <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
       <div style="width:30%; height:450px; border:1px solid black; border-radius: 50px;">
-        <h2 style="text-align: center;">Major Filter</h2>
+        <h2 style="text-align: center;">Filter</h2>
         <form id="filters" method="get" style="font-size: larger;">
           <div style="margin-left: 10%;">
             <br>
@@ -145,7 +145,7 @@
         </table>
     </div>     
     </div>
-    <br><br>
+    <br><br><br>
   <script>
     const form = document.getElementById("info-form").elements;
     var str = "info=";
@@ -208,6 +208,11 @@
             });
         });
   </script>
+
+  <footer id="footer-container">
+            <div id="footer-bar"></div>
+            <p> &copy; 2023 Santa Clara University School of Engineering </p>
+        </footer>
   </body>
   </html>
   

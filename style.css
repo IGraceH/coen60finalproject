@@ -246,7 +246,7 @@ hr {
 }
 
 #advisor-list {
-  height: 70vh;
+  height: 550px;
   overflow-y: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */

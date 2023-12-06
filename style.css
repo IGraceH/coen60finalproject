@@ -21,7 +21,7 @@ h1 {
   text-align: center;
 }
 
-p {
+#homepage p {
   font-size: 18px;
   line-height: 28px;
 }
@@ -52,7 +52,7 @@ p {
 }
 
 
-#main-container {
+.main-container {
   margin: 0 12% 0 12%;
 }
 

@@ -229,3 +229,21 @@ hr {
   min-width: 200px;
   padding: 5px;
 }
+
+#footer-container {
+    background-color: #7b1113;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    clear: both;
+}
+
+#footer-bar{
+  height: 3px;
+  background-color: white;
+  margin-bottom: 20px;
+}

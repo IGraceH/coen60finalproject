@@ -1,4 +1,4 @@
-function validateForm() {
+function validateLogin() {
     var email = document.getElementById("email").value;
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -13,18 +13,62 @@ function validateForm() {
         return false;
     }
 
-    window.location.href = "studentSubmit.html";
+    // window.location.href = "studentSubmit.html";
     
-    return false;
+    return true;
+}
+
+function validateStudentForm() {
+    if (document.getElementById("delete-check").checked) {
+        var str = "info=A:;B:;C:;D:;1";
+        updateTable(str);
+        window.alert("You were successfully removed from the list! Hope you visit us again :)");
+        return 0;
+    } else {
+        if (document.getElementById("fname").value == "" || document.getElementById("lname").value == "" || document.getElementById("major").value == "" || document.getElementById("interests").value == "") {
+            window.alert("Please finish filling in all of the information.");
+            return 1;
+        }
+    }
+    return 2;
 }
 
 function updateTable(str) {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("student-table").innerHTML = this.responseText;
+            var str = this.responseText;
+            var split2 = str.split("interest=");
+            var interestTxt = split2[1];
+            var split3 = split2[0].split("major=");
+            var majorTxt = split3[1];
+            var tableTxt = split3[0];
+            document.getElementById("student-table").innerHTML = tableTxt;
+            if (document.getElementById("usersMajor") != null && document.getElementById("usersInterest") != null) {
+                document.getElementById("usersMajor").innerHTML = "Your Major: " + majorTxt;
+                document.getElementById("usersInterest").innerHTML = "Your Interests: " + interestTxt;
+            }
         }
     };
     xmlhttp.open("GET", "get_info.php?" + str, true);
+    xmlhttp.send();
+}
+
+function setUser(str) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let response = this.responseText;
+            if (response == "1") {
+                updateTable("info=");
+                window.location.href = "studentSubmit.html";
+            } else {
+                window.alert("Wrong password! Please retry again.");
+            }
+            // alert user: if the password is wrong, alert
+            // if the password is not wrong or is a new user, redirect to the new page
+        }
+    };
+    xmlhttp.open("GET", "get_user.php?" + str, true);
     xmlhttp.send();
 }

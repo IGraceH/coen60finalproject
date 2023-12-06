@@ -1,9 +1,15 @@
+<!-- README:
+    Things to check for before running login/studentSubmit webpages:
+    - have read/write access for the files: studentList.txt turned ON
+    - allow local cookies -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Document</title>
     <script type="text/javascript" src="studentForm.js"></script>  
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header id="header-container">
@@ -52,57 +58,90 @@
             <h2 style="text-align: center;">Major Filter</h2>
                 <form id="filters" method="get" style="font-size: larger;">
                     <div style="margin-left: 10%;">
-                    <label for="search">Search:</label>
-                    <input style="width:85%; height:30px" class="input-field" type="text" name="search">
-                    <br>
-                    <p>Department:</p>
-                    <input type="checkbox" id="ben" name="Bioengineering">
-                    <label for="ben">Bioengineering</label>
-                    <br>
-                    <input type="checkbox" id="cen" name="Civil Engineering">
-                    <label for="cen">Civil Engineering</label>
-                    <br>
-                    <input type="checkbox" id="csen" name="Computer Science and Engineering">
-                    <label for="csen">Computer Science and Engineering</label>
-                    <br>
-                    <input type="checkbox" id="ecen" name="Electrical and Computer Engineering">
-                    <label for="ece">Electrical and Computer Engineering</label>
-                    <br>
-                    <input type="checkbox" id="gen" name="General Engineering">
-                    <label for="gen">General Engineering</label>
-                    <br>
-                    <input type="checkbox" id="mech" name="Mechanical Engineering">
-                    <label for="mech">Mechanical Engineering</label>
-                    <br><br>
-                    </div>
-                    <input class="submit-button" type="submit" value="Submit">
+                        <br>
+                        <p>Majors:</p>
+                        <input type="checkbox" id="BIOE_filter" value = "BIOE" name="majors-filters">
+                        <label for="BIOE">Bioengineering</label>
+                        <br>
+                        <input type="checkbox" id="CESE_filter" value = "CESE" name="majors-filters">
+                        <label for="CESE">Civil Engineering</label>
+                        <br>
+                        <input type="checkbox" id="CSEN_filter" value = "CSEN" name="majors-filters">
+                        <label for="CSEN">Computer Science and Engineering</label>
+                        <br>
+                        <input type="checkbox" id="WDE_filter" value = "WDE" name="majors-filters">
+                        <label for="WDE">Web Design and Engineering</label>
+                        <br>
+                        <input type="checkbox" id="ECEN_filter" value = "ECEN" name="majors-filters">
+                        <label for="ECEN">Electrical and Computer Engineering</label>
+                        <br>
+                        <input type="checkbox" id="ELEN_filter" value = "ELEN" name="majors-filters">
+                        <label for="ELEN">Electrical Engineering</label>
+                        <br>
+                        <input type="checkbox" id="GENE_filter" value = "GENE" name="majors-filters">
+                        <label for="GENE">General Engineering</label>
+                        <br>
+                        <input type="checkbox" id="MECH_filter" value = "MECH" name="majors-filters">
+                        <label for="MECH">Mechanical Engineering</label>
+                        <br><br>
+                      </div>
+                      <input id = "filter-button" class="major-filter-button" type="button" value="Submit">
                 </form>
         </div>
-        <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px;">
+        <div style="width:55%; height:450px; border: none">
+            <h2 style="text-align: center;">Information Table</h2>
             <table id = "student-table"></div>
         </div>
     </div>
     <script>
-        const form = document.getElementById("login-form").elements;
         var str = "info=";
         updateTable(str);
         document.getElementById("login-form").addEventListener('submit', function(event) {
             event.preventDefault();
-            if (validateForm()) {
-                const form = document.getElementById("student-form").elements;
+            if (validateLogin()) {
+                const form = document.getElementById("login-form").elements;
                 let info = [];
                 for (let i = 0; i < form.length; i++) {
                     info.push(form[i].value);
                 }
-                var str = "info=";
-                for (let i = 0; i < 5; i++) {
+                var str = "user=";
+                for (let i = 0; i < 2; i++) {
                     str += info[i];
-                    if (i != 4) {
+                    if (i != 1) {
                         str += ":;";
                     }
                 }
-                updateTable(str);
+                setUser(str);
             }
+        });
+
+        $(document).ready(function(){
+            $("#filter-button").click(function(){
+                var checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
+                var allMajors = ["BIOE", "CESE", "CSEN", "WDE", "ECEN", "ELEN", "GENE", "MECH"];
+                if (checkedBoxes.length == 0 || checkedBoxes.length == 8) {
+                    $(".BIOE").show();
+                    $(".CESE").show();
+                    $(".CSEN").show();
+                    $(".WDE").show();
+                    $(".ECEN").show();
+                    $(".ELEN").show();
+                    $(".GENE").show();
+                    $(".MECH").show();
+                } else {
+                    var checked = [];
+                    for (let i = 0; i < checkedBoxes.length; i++) {
+                        var val = checkedBoxes[i].value;
+                        checked.push(val);
+                        $("." + val).show();
+                    }
+                    for (let i = 0; i < allMajors.length; i++) {
+                        if (checked.indexOf(allMajors[i]) == -1) {
+                            $("." + allMajors[i]).hide();
+                        }
+                    }
+                }
+            });
         });
     </script>
 </body>

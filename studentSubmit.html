@@ -1,158 +1,201 @@
+<!-- README:
+   Things to check for before running login/studentSubmit webpages:
+   - have read/write access for the files: studentList.txt, and current-user.txt turned ON
+  -->
+
+
 <!DOCTYPE html>
-<html>
-
-<head>
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
-  <script type="text/javascript" src="studentForm.js"></script>
-</head>
-
-<body>
-  <header id="header-container">
-    <a href= "https://www.scu.edu/">
-    <img src="embed/sculogo.jpg" width="100" height="100" alt="logo">
-    </a>
-    <div>
-      <h1 style="font-family: cursive; color: #7b1113">Santa Clara University</h1>
-      <h2 style="font-weight:100;">SCHOOL OF ENGINEERING</h2>
-    </div>
-  </header>
-
-
-
-  <div id="nav">
-    <a href="homepage.html">Home</a>
-    <a href="advisors.html">Advisor</a>
-    <a class="active" href="Login.html">Team Building</a>
-  </div>
-  <h1 style="text-align: center;">Welcome To Senior Design Team Formation Support</h1>
-  <hr>
-  <br>
-  <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
-    <div style="width:30%; height:450px; border:1px solid black; border-radius: 50px;">
-      <h2 style="text-align: center;"></h2>
+  <html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script type="text/javascript" src="studentForm.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header id="header-container">
+      <img src="embed/sculogo.jpg" width="100" height="100" alt="logo">
       <div>
-        <form>
+        <h1 style="font-family: cursive; color: #7b1113">Santa Clara University</h1>
+        <h2 style="font-weight:100;">SCHOOL OF ENGINEERING</h2>
+      </div>
+    </header>
+  
+    <div id="nav">
+      <a href="homepage.html">Home</a>
+      <a href="advisors.html">Advisor</a>
+      <a class="active" href="Login.html">Team Building</a>
+    </div>
+    <h1 style="text-align: center;">Welcome To Senior Design Team Formation Support</h1>
+    <hr>
+    <br>
+    <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
+      <div style="width:30%; height:600px; border:1px solid black; border-radius: 50px;">
+        <h2 style="text-align: center;"></h2>
+        <div>
+          <form id = "info-form" method="get" action = "">
+            <div style="margin-left:10%;">
+              <label>
+                <h3>First Name</h3>
+              </label>
+              <input id="fname" style="width:85%; height:20px" type="text" name="fname"><br><br>
+            </div>
+            <div style="margin-left:10%;">
+              <label>
+                <h3>Last Name</h3>
+              </label>
+              <input id="lname" style="width:85%; height:20px" type="text" name="lname"><br><br>
+            </div>
+            <div style="margin-left: 10%;">
+              <label>
+                <h3>Your Major</h3>
+              </label>
+              <select id="major" name="major-list" style="width: 87%; height:25px">
+                <option value="">Select a Major</option>
+                <option value="BIOE">Bioengineering</option>
+                <option value="CESE">Civil Engineering</option>
+                <option value="CSEN">Computer Science and Engineering</option>
+                <option value="ECEN">Electrical and Computer Engineering</option>
+                <option value="ELEN">Electrical Engineering</option>
+                <option value="GENE">General Engineering</option>
+                <option value="MECH">Mechanical Engineering</option>
+                <option value="WDE">Web Design and Engineering</option>
+              </select><br><br>
+            </div>
+        </div>
+            <div style="margin-left:10%;">
+              <label>
+                <h3>Any topic your're interest in?</h3>
+              </label>
+              <input id="interests" style="width:85%; height:20px" type="text" name="interests"><br><br>
+            </div>
+            <div style="margin-left: 10%;">
+              <h3>Want to remove your account?</h3>
+              <input type="checkbox" id="delete-check">
+              <label style="font-size: medium;;">Know that once your account is deleted, your information will not be shown
+                anymore</label>
+            </div>
+            <br>
+            <input class="submit-button" type="submit" value="Register/Update your info">
+          </form>
+      </div>
+    <div style="width:55%; height:600px; border:1px solid black; border-radius: 50px; background-color:bisque;">
+      <h1 style="text-align: center;">Your're Logged in!</h1><br>
+      <div style="margin-left: 6%; margin-right: 6%;">
+        <h3 id="usersMajor" style="font-size: larger;">Your Major: Megu, please update their major here </h3><br>
+        <h3 id="usersInterest" style="font-size: larger;">Your Interest: Megu, please update their interest here</h3><br> 
+        <h3 id="deleteInfo" style="font-size: larger;">About Deleting your Account: If you already found or form a group, you can use the delete button to remove your account so your information will no longer be shown to the public.</h3><br>
+        <h3 style="font-size: larger;">About your interest: Try to make your interest shorter and on the point so it will be easier for other people to know your interest quickly</h3><br>
+        <h3 style="font-size: larger;">If you have any questions, please contact us!</h3>
+      </div>
+    </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
+      <div style="width:30%; height:450px; border:1px solid black; border-radius: 50px;">
+        <h2 style="text-align: center;">Major Filter</h2>
+        <form id="filters" method="get" style="font-size: larger;">
           <div style="margin-left: 10%;">
-            <label>
-              <h3>Your Major</h3>
-            </label>
-            <select id="major" name="major-list" style="width: 87%; height:35px">
-              <option value="">Select a Major</option>
-              <option value="BIOE">Bioengineering</option>
-              <option value="CESE">Civil Engineering</option>
-              <option value="CSEN">Computer Science and Engineering</option>
-              <option value="ECEN">Electrical and Computer Engineering</option>
-              <option value="ELEN">Electrical Engineering</option>
-              <option value="GENE">General Engineering</option>
-              <option value="MECH">Mechanical Engineering</option>
-              <option value="WDE">Web Design and Engineering</option>
-            </select><br><br>
+            <br>
+            <p>Majors:</p>
+            <input type="checkbox" id="BIOE_filter" value = "BIOE" name="majors-filters">
+              <label for="BIOE">Bioengineering</label>
+              <br>
+              <input type="checkbox" id="CESE_filter" value = "CESE" name="majors-filters">
+              <label for="CESE">Civil Engineering</label>
+              <br>
+              <input type="checkbox" id="CSEN_filter" value = "CSEN" name="majors-filters">
+              <label for="CSEN">Computer Science and Engineering</label>
+              <br>
+              <input type="checkbox" id="WDE_filter" value = "WDE" name="majors-filters">
+              <label for="WDE">Web Design and Engineering</label>
+              <br>
+              <input type="checkbox" id="ECEN_filter" value = "ECEN" name="majors-filters">
+              <label for="ECEN">Electrical and Computer Engineering</label>
+              <br>
+              <input type="checkbox" id="ELEN_filter" value = "ELEN" name="majors-filters">
+              <label for="ELEN">Electrical Engineering</label>
+              <br>
+              <input type="checkbox" id="GENE_filter" value = "GENE" name="majors-filters">
+              <label for="GENE">General Engineering</label>
+              <br>
+              <input type="checkbox" id="MECH_filter" value = "MECH" name="majors-filters">
+              <label for="MECH">Mechanical Engineering</label>
+            <br><br>
           </div>
-          <input class="submit-button" type="submit" value="Update Major">
+          <input id = "filter-button" class="major-filter-button" type="button" value="Submit">
         </form>
       </div>
-      <form onsubmit="return validateForm()">
-        <div style="margin-left:10%;">
-          <label>
-            <h3>Any topic your're interest in?</h3>
-          </label>
-          <input id="username" style="width:85%; height:30px" type="text" name="username"><br><br>
-        </div>
-        <input class="submit-button" type="submit" value="Update Interest">
-      </form>
-      <form>
-        <div style="margin-left: 10%;">
-          <h3>Want to remove your account?</h3>
-          <input type="checkbox">
-          <label style="font-size: medium;;">Know that once your account is deleted, your information will not be shown
-            anymore</label>
-        </div>
-        <br>
-        <input class="submit-button" type="submit" value="Delete Account">
-      </form>
-    </div>
-    <div style="width:55%; height:450px; border:1px solid black; border-radius: 50px;">
-      <h1 style="text-align: center;">Your're Logged in!</h1><br>
-      <div style="margin-left: 6%;">
-        <h3 id="usersMajor" style="font-size: larger;">Your Major: Megu, please update their major here </h3><br>
-        <h3 id="usersInterest" style="font-size: larger;">Your Interest: Megu, please update their interest here</h3><br>  
-        <h3 id="deleteInfo" style="font-size: larger;">About Deleting Account: If you already found or form a group, you can use the delete button to remove your account so your information will no longer be shown to the public</h3>
+      <div style="width:55%; height:450px;">
+        <h2 style="text-align: center;">Information Table</h2>
+        <table id = "student-table"></div>
       </div>
     </div>
-  </div>
-  <br>
-  <hr>
-  <br>
-  <div style="width:100%; height:auto; display: flex; justify-content: center; gap: 5%;">
-    <div style="width:30%; height:450px; border:1px solid black; border-radius: 50px;">
-
-         
-
-      <h2 style="text-align: center;">Major Filter</h2>
-      <form id="filters" method="get" style="font-size: larger;">
-        <div style="margin-left: 10%;">
-          <label for="search">Search:</label>
-          <input style="width:85%; height:30px" class="input-field" type="text" name="search">
-          <br>
-          <p>Department:</p>
-          <input type="checkbox" id="ben" name="Bioengineering">
-          <label for="ben">Bioengineering</label>
-          <br>
-          <input type="checkbox" id="cen" name="Civil Engineering">
-          <label for="cen">Civil Engineering</label>
-          <br>
-          <input type="checkbox" id="csen" name="Computer Science and Engineering">
-          <label for="csen">Computer Science and Engineering</label>
-          <br>
-          <input type="checkbox" id="ecen" name="Electrical and Computer Engineering">
-          <label for="ece">Electrical and Computer Engineering</label>
-          <br>
-          <input type="checkbox" id="gen" name="General Engineering">
-          <label for="gen">General Engineering</label>
-          <br>
-          <input type="checkbox" id="mech" name="Mechanical Engineering">
-          <label for="mech">Mechanical Engineering</label>
-          <br><br>
-        </div>
-        <input class="submit-button" type="submit" value="Submit">
-      </form>
-    </div>
-    <div style="width:55%; height:450px; border: 1px solid black; border-radius: 50px;">
-      <table id = "student-table"></div>
-    </div>
-  </div>
-  <br><br>
-  <div id="spreadsheet">
-    <table id="student-table"></table>
-  </div>
-
-
+    <br><br>
   <script>
-    const form = document.getElementById("login-form").elements;
+    const form = document.getElementById("info-form").elements;
     var str = "info=";
     updateTable(str);
-    document.getElementById("login-form").addEventListener('submit', function(event) {
+    document.getElementById("info-form").addEventListener('submit', function(event) {
         event.preventDefault();
-        if (validateForm()) {
-            const form = document.getElementById("student-form").elements;
-            let info = [];
-            for (let i = 0; i < form.length; i++) {
-                info.push(form[i].value);
-            }
-            var str = "info=";
-            for (let i = 0; i < 5; i++) {
-                str += info[i];
-                if (i != 4) {
-                    str += ":;";
-                }
-            }
-            updateTable(str);
+
+        if (validateStudentForm() == 2) {
+          const form = document.getElementById("info-form").elements;
+          let info = [];
+          for (let i = 0; i < 4; i++) {
+              info.push(form[i].value);
+          }
+          var deleteCheck = document.getElementById("delete-check");
+          if (deleteCheck.checked == true) {
+            info.push("1");
+          } else {
+            info.push("0");
+          }
+          var str = "info=";
+          for (let i = 0; i < 5; i++) {
+              str += info[i];
+              if (i != 4) {
+                  str += ":;";
+              }
+          }
+          updateTable(str);
+          window.alert("Successfully registered/updated your info!");
+
+          
         }
     });
-</script>
 
- 
-
-</body>
-</html>
+    $(document).ready(function(){
+            $("#filter-button").click(function(){
+                var checkedBoxes = document.querySelectorAll('input[type=checkbox]:checked');
+                var allMajors = ["BIOE", "CESE", "CSEN", "WDE", "ECEN", "ELEN", "GENE", "MECH"];
+                if (checkedBoxes.length == 0 || checkedBoxes.length == 8) {
+                    $(".BIOE").show();
+                    $(".CESE").show();
+                    $(".CSEN").show();
+                    $(".WDE").show();
+                    $(".ECEN").show();
+                    $(".ELEN").show();
+                    $(".GENE").show();
+                    $(".MECH").show();
+                } else {
+                    var checked = [];
+                    for (let i = 0; i < checkedBoxes.length; i++) {
+                        var val = checkedBoxes[i].value;
+                        checked.push(val);
+                        $("." + val).show();
+                    }
+                    for (let i = 0; i < allMajors.length; i++) {
+                        if (checked.indexOf(allMajors[i]) == -1) {
+                            $("." + allMajors[i]).hide();
+                        }
+                    }
+                }
+            });
+        });
+  </script>
+  </body>
+  </html>
+  

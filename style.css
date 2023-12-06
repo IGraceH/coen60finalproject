@@ -7,6 +7,17 @@ img {
   margin: 10px;
 }
 
+a {
+  color: #7b1113;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: #e01f22;
+  text-decoration: underline;
+}
+
 #header-container {
   display: flex;
   width: 100%;
@@ -119,6 +130,7 @@ hr {
   color: white;
   border: none;
   opacity: .4;
+  cursor: pointer;
 }
 
 .submit-button:active {
@@ -126,17 +138,33 @@ hr {
   transform: translateX(-50%) translateY(2px);
 }
 
-.input-field {
+.major-filter-button {
+  background-color: black;
   border-radius: 5px;
-  border: 1px solid black;
-  width: 100%
+  color: white;
+  height: 30px;
+  width: 300px;
+  font-size: medium;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid whitesmoke;
+  opacity: .4;
+  box-shadow: 0 3px #999;
 }
 
-.input-field:hover {
-  background-color: black;
-  opacity: .4;
+.major-filter-button:hover {
+  font-size: medium;
   color: white;
+  border: none;
+  opacity: .4;
 }
+
+.major-filter-button:active {
+  box-shadow: 0 3px black;
+  transform: translateX(-50%) translateY(2px);
+}
+
 
 #check:hover {
   opacity: .4;
@@ -197,7 +225,14 @@ hr {
 }
 
 #advisor-list {
-  margin-bottom: 100px;
+  height: 70vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#advisor-list::-webkit-scrollbar {
+    display: none;
 }
 
 #advisor-table {

@@ -19,7 +19,7 @@
         }
     }
 
-    // // if this is a new user, just write their name in the current user file
+    // if this is a new user, just write their name in the current user file
     if ($return_str == "1") {
         fwrite($currentUserFile, $currentUser);
     }
